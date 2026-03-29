@@ -1,48 +1,31 @@
-# Thanuprakash Gowda - Personal Portfolio ✨
+# Personal Portfolio
 
-A modern, responsive, and performance-optimized personal portfolio web application to showcase my skills, projects, and academic background as an Information Science & Technology student.
+Hey! This is the source code for my personal portfolio website. 
 
-![Portfolio Live Preview Placeholder](https://via.placeholder.com/800x400.png?text=Thanuprakash+Gowda+Portfolio)
+I'm Thanuprakash Gowda, an Information Science engineering student currently studying in Mangaluru. I built this site to keep all my projects, skills, and academic background in one place.
 
-## 🚀 Built With
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Icons**: SVG / Hand-crafted Layouts
-- **Deployment**: Local / Vercel optimized
+## Tech Stack
+- Next.js 15 (App Router)
+- Tailwind CSS
+- TypeScript
 
-## 🌟 Key Features
-- **Dynamic Data Structure**: All content is managed securely via a single source of truth (`src/data/portfolio.ts`), allowing instant updates without risking UI bugs.
-- **Server-Side Rendered & SEO Optimized**: Next.js App Router for top-tier indexing.
-- **Fully Responsive**: A fluid design system that intelligently scales typography, images, and card layouts seamlessly across mobile, tablet, and desktop viewports.
-- **Native Direct Contact Handler**: An embedded Contact section logic that triggers a completely driverless, safe `mailto:` command to natively parse client requests.
+## How it works
 
-## 🛠️ Local Development
+The entire site is component-based. Instead of digging through multiple React components to update my resume, I centralized all the content into a single file: `src/data/portfolio.ts`. 
 
-First, ensure you have Node.js installed. Then clone this repository and install dependencies:
+If I ever need to add a new project, add an achievement, or change my bio, I just edit that one file and the UI updates automatically. The design is inspired by the simplefolio template.
+
+## Running it locally
+
+If you want to spin this up locally or fork it for yourself:
 
 ```bash
-# Install dependencies
 npm install
-
-# Start the development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the live site. 
-The components auto-hot reload as you edit the local files.
+Open `http://localhost:3000` in your browser and you should be good to go.
 
-## 📁 Repository Structure
-```
-📂 src/
- ┣ 📂 app/        # Next.js App Router root & Global CSS
- ┣ 📂 components/ # Reusable UI pieces (Navbar, Footer, Section Headers)
- ┃ ┗ 📂 sections/ # Core page blocks (Hero, About, Education, Skills, Projects, Certifications, Contact)
- ┣ 📂 data/       # `portfolio.ts` - Central database file for content
- ┗ ...
-```
-
-## 📫 Get in Touch
-- **Email**: thanuprakashgowda13@gmail.com
-- **LinkedIn**: [linkedin.com/in/thanuprakash-gowda](https://www.linkedin.com/in/thanuprakash-gowda)
-- **Location**: Karnataka, India
+## Contact
+- **Email:** thanuprakashgowda13@gmail.com
+- **LinkedIn:** [linkedin.com/in/thanuprakash-gowda](https://www.linkedin.com/in/thanuprakash-gowda)

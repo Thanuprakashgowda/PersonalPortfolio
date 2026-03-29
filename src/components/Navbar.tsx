@@ -12,6 +12,9 @@ export default function Navbar() {
             <Link href="#about" className="hover:text-blue-600 transition-colors">About</Link>
           </li>
           <li>
+            <Link href="#education" className="hover:text-blue-600 transition-colors">Education</Link>
+          </li>
+          <li>
             <Link href="#skills" className="hover:text-blue-600 transition-colors">Skills</Link>
           </li>
           <li>

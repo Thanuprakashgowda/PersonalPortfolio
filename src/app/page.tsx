@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import EducationSection from "@/components/sections/EducationSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
@@ -17,7 +18,13 @@ export default function Home() {
         <AboutSection />
       </main>
       
-      <div className="w-full bg-gray-50/50 border-y border-gray-100">
+      <div className="w-full border-y border-gray-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <EducationSection />
+        </div>
+      </div>
+      
+      <div className="w-full bg-gray-50/50 border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6">
           <SkillsSection />
         </div>

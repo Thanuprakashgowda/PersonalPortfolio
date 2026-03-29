@@ -10,20 +10,27 @@ export const portfolioData = {
     linkedin: "www.linkedin.com/in/thanuprakash-gowda",
     github: "github.com/Thanuprakashgowda",
     role: "Information Science & Technology Student",
-    objective: "Information Science and Technology engineering student with a growing interest in cloud computing and data analytics. Seeking opportunities to apply cloud fundamentals, deployment practices, and analytical thinking while continuously learning and strengthening practical technical skills.",
+    objective: "Information Science and Technology engineering student with a growing interest in full stack development and data analytics. Seeking opportunities to apply programming fundamentals, deployment practices, and analytical thinking while continuously learning and building applications on vibe coding platforms.",
+    resumeUrl: "https://drive.google.com/file/d/1F_V3tamNhjRioOeG1thKeUfDp1jeZDre/view?usp=sharing"
   },
   education: [
     {
       degree: "Bachelor of Engineering (B.E.) – Information Science & Technology",
-      institution: "Canara Engineering College, Karnataka",
+      institution: "Canara Engineering College, Mangaluru",
       graduation: "Expected Graduation: 2027",
-      sgpa: [
-        { semester: "Sem 1", score: 6.73 },
-        { semester: "Sem 2", score: 7.45 },
-        { semester: "Sem 3", score: 7.43 },
-        { semester: "Sem 4", score: 8.24 },
-        { semester: "Sem 5", score: 8.95 },
-      ]
+      score: "CGPA: 7.76"
+    },
+    {
+      degree: "Pre-University (PUC)",
+      institution: "Toppers PU College, Holenarasipura",
+      graduation: "Completed",
+      score: "86.33%"
+    },
+    {
+      degree: "SSLC",
+      institution: "Adarsha Vidyalaya",
+      graduation: "Completed",
+      score: "91.36%"
     }
   ],
   skills: [
@@ -45,27 +52,28 @@ export const portfolioData = {
     },
     {
       category: "Tools",
-      items: ["Git", "VS Code", "Arduino IDE", "Streamlit", "Antigravity", "Vercel", "Postman"]
+      items: ["Git", "VS Code", "Arduino IDE", "Streamlit", "Antigravity", "Vercel", "Postman", "Tableau", "Power BI"]
     }
   ],
   projects: [
     {
-      title: "Cloud-Based Student Management System",
-      technologies: ["Node.js", "Express.js", "MySQL (AWS RDS)", "HTML", "CSS", "JavaScript"],
+      title: "HostelHub (Runner-Up)",
+      technologies: ["Python", "Flask", "MySQL", "REST APIs", "Postman"],
       description: [
-        "Developed a full-stack student management system with a cloud-hosted MySQL database on AWS RDS.",
-        "Designed RESTful APIs and relational schema to manage students, departments, courses, and enrollments with complete CRUD operations.",
-        "Built a responsive web dashboard and tested backend endpoints using Postman following clean code architecture."
+        "Developed and presented a completely functional backend system during the CEATHERION 2025 24-hour hackathon.",
+        "Created a robust RESTful API with Flask and MySQL to solve real-world hostel resource allocation and management routing.",
+        "Demonstrated working functionality accurately under extreme time constraints."
       ],
       githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
       demoLink: "" // Placeholder
     },
     {
-      title: "Banking Chatbot Application",
-      technologies: ["Python", "Flask"],
+      title: "Cloud SMS — AI-Powered Management System",
+      technologies: ["Node.js", "Express.js", "MySQL (TiDB)", "Gemini AI", "Chart.js", "JWT", "Vercel"],
       description: [
-        "Designed and developed a chatbot to handle basic banking-related user queries.",
-        "Implemented backend logic using Flask for request handling and responses."
+        "Architected an advanced multi-tenant student management system operating on a cloud-hosted MySQL TiDB cluster.",
+        "Implemented secure JWT role-based access control and generated dynamic AI-powered insights using the Gemini API.",
+        "Constructed intuitive reporting dashboards using Chart.js to visually map administrative data."
       ],
       githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
       demoLink: "" // Placeholder
@@ -74,19 +82,19 @@ export const portfolioData = {
       title: "IoT-Based Food Freshness Monitoring System",
       technologies: ["Arduino", "Sensors", "Streamlit"],
       description: [
-        "Developed a low-cost system to assess fruit and vegetable freshness using sensor data.",
-        "Displayed real-time freshness levels through a web-based dashboard."
+        "Developed a low-cost embedded hardware system to continuously evaluate raw food freshness based on dynamic environmental sensor metrics.",
+        "Engineered a real-time tracking interface utilizing Python and Streamlit to display ongoing readings seamlessly."
       ],
       githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
       demoLink: "" // Placeholder
     },
     {
-      title: "Akshara – Bilingual Blogging Platform",
-      technologies: ["Antigravity Platform", "Next.js", "MongoDB", "Tailwind CSS"],
+      title: "DigiBouquet",
+      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Vercel Postgres", "Antigravity"],
       description: [
-        "Built and deployed a bilingual (English–Kannada) blogging platform using the Antigravity development platform with Next.js architecture.",
-        "Configured content models, authentication, and admin dashboard for post management including image uploads and rich text editing.",
-        "Customized UI, dark/light theme, and SEO settings to improve accessibility and performance."
+        "Engineered a dynamic, highly responsive modern web application focused on optimal UI/UX standards.",
+        "Leveraged Vercel Postgres to rapidly implement database abstraction layers for complex data persistence workflows.",
+        "Achieved near-instant deployment cycles using continuous delivery and strict TypeScript adherence."
       ],
       githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
       demoLink: "" // Placeholder
@@ -98,7 +106,7 @@ export const portfolioData = {
     "Self-learning through online platforms"
   ],
   achievements: [
-    "Runner-Up in the Full Stack Development domain at CEATHERION 2025 – 24-hour Hackathon, Canara Engineering College (Nov 2025); developed and presented a working full-stack solution under time constraints.",
+    "Runner-Up in the Full Stack Development domain at CEATHERION 2025 – 24-hour Hackathon, Canara Engineering College (Nov 2025)",
     "Actively practicing Fundamentals of Computer Science on online platforms",
     "Participated in technical mini-project evaluations and presentations"
   ],

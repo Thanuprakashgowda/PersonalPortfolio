@@ -18,7 +18,7 @@ export default function CertificationsSection() {
             {certifications.map((cert, index) => (
               <li key={index} className="flex gap-4 items-start">
                 <span className="w-2 h-2 rounded-full bg-blue-600 mt-2 flex-shrink-0"></span>
-                <span className="text-gray-600 leading-relaxed">{cert}</span>
+                <span className="text-gray-800 leading-relaxed">{cert}</span>
               </li>
             ))}
           </ul>
@@ -33,7 +33,7 @@ export default function CertificationsSection() {
             {achievements.map((ach, index) => (
               <li key={index} className="flex gap-4 items-start">
                 <span className="w-2 h-2 rounded-full bg-blue-600 mt-2 flex-shrink-0"></span>
-                <span className="text-gray-600 leading-relaxed">{ach}</span>
+                <span className="text-gray-800 leading-relaxed">{ach}</span>
               </li>
             ))}
           </ul>

@@ -13,8 +13,9 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       
+      <HeroSection />
+      
       <main className="flex-1 w-full max-w-5xl mx-auto px-6">
-        <HeroSection />
         <AboutSection />
       </main>
       
@@ -44,9 +45,7 @@ export default function Home() {
 
 
       
-      <main className="flex-1 w-full max-w-5xl mx-auto px-6">
-        <ContactSection />
-      </main>
+      <ContactSection />
       
       <Footer />
     </div>

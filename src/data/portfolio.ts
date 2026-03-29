@@ -52,7 +52,7 @@ export const portfolioData = {
     },
     {
       category: "Tools",
-      items: ["Git", "VS Code", "Arduino IDE", "Streamlit", "Antigravity", "Vercel", "Postman", "Tableau", "Power BI"]
+      items: ["Git", "VS Code", "Arduino IDE", "Antigravity", "Vercel", "Postman", "Tableau", "Power BI"]
     }
   ],
   projects: [

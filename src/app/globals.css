@@ -1,24 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
+  --color-primary-50: #e0f9f8;
+  --color-primary-100: #b3f0ec;
+  --color-primary-200: #80e6e0;
+  --color-primary-500: #02aab0;
+  --color-primary-600: #00cdac;
+  --color-primary-700: #009e86;
   
   --color-background: #ffffff;
-  --color-foreground: #111827;
+  --color-foreground: #333333;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
 }
 
 ::selection {
   background-color: var(--color-primary-200);
   color: var(--color-foreground);
+}
+
+/* Simplefolio Specific Utilities */
+.hero-gradient {
+  background: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+}
+
+.footer-gradient {
+  background: linear-gradient(135deg, #333 0%, #111 100%);
+  color: white;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+.title-text {
+  background: linear-gradient(135deg, #02aab0 0%, #00cdac 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

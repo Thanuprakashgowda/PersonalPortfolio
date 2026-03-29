@@ -7,7 +7,7 @@ export default function Navbar() {
         <Link href="#" className="text-xl font-bold text-gray-900 tracking-tight">
           TG<span className="text-blue-600">.</span>
         </Link>
-        <ul className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+        <ul className="hidden md:flex items-center gap-8 text-sm font-bold text-gray-900">
           <li>
             <Link href="#about" className="hover:text-blue-600 transition-colors">About</Link>
           </li>

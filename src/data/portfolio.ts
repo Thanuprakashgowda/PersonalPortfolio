@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export const portfolioData = {
   personalInfo: {
     name: "Thanuprakash Gowda",
-    location: "Karnataka, India",
+    location: "Hassan, Karnataka, India",
     phone: "7204821605",
     email: "thanuprakashgowda13@gmail.com",
     linkedin: "www.linkedin.com/in/thanuprakash-gowda",
@@ -28,7 +28,7 @@ export const portfolioData = {
     },
     {
       degree: "SSLC",
-      institution: "Adarsha Vidyalaya",
+      institution: "Adarsha Vidyalaya,Holenarasipura",
       graduation: "Completed",
       score: "91.36%"
     }
@@ -36,7 +36,7 @@ export const portfolioData = {
   skills: [
     {
       category: "Programming Languages",
-      items: ["Java", "C", "Python (Basic)", "LaTeX (Basic)"]
+      items: ["Java", "C", "Python ", "LaTeX"]
     },
     {
       category: "Web Technologies",
@@ -44,11 +44,11 @@ export const portfolioData = {
     },
     {
       category: "Databases",
-      items: ["SQL (Basic)", "MongoDB (Basic)"]
+      items: ["SQL", "MongoDB"]
     },
     {
       category: "Core Concepts",
-      items: ["DBMS", "Operating Systems (Basics)", "Computer Networks (Basics)", "Cloud Computing Fundamentals"]
+      items: ["DBMS", "Operating Systems", "Computer Networks", "Cloud Computing Fundamentals", "Data structures&algorithms", "Machine Learning", "Theory of computation"]
     },
     {
       category: "Tools",
@@ -64,7 +64,7 @@ export const portfolioData = {
         "Created a robust RESTful API with Flask and MySQL to solve real-world hostel resource allocation and management routing.",
         "Demonstrated working functionality accurately under extreme time constraints."
       ],
-      githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
+      githubLink: "https://github.com/Thanuprakashgowda/HSH", // Placeholder
       demoLink: "" // Placeholder
     },
     {
@@ -75,8 +75,8 @@ export const portfolioData = {
         "Implemented secure JWT role-based access control and generated dynamic AI-powered insights using the Gemini API.",
         "Constructed intuitive reporting dashboards using Chart.js to visually map administrative data."
       ],
-      githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
-      demoLink: "" // Placeholder
+      githubLink: "https://github.com/Thanuprakashgowda/Cloud-management-system", // Placeholder
+      demoLink: "https://cloud-management-system-black.vercel.app/" // Placeholder
     },
     {
       title: "IoT-Based Food Freshness Monitoring System",
@@ -85,8 +85,6 @@ export const portfolioData = {
         "Developed a low-cost embedded hardware system to continuously evaluate raw food freshness based on dynamic environmental sensor metrics.",
         "Engineered a real-time tracking interface utilizing Python and Streamlit to display ongoing readings seamlessly."
       ],
-      githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
-      demoLink: "" // Placeholder
     },
     {
       title: "DigiBouquet",
@@ -96,7 +94,26 @@ export const portfolioData = {
         "Leveraged Vercel Postgres to rapidly implement database abstraction layers for complex data persistence workflows.",
         "Achieved near-instant deployment cycles using continuous delivery and strict TypeScript adherence."
       ],
-      githubLink: "https://github.com/Thanuprakashgowda", // Placeholder
+      githubLink: "https://github.com/Thanuprakashgowda/digibouquet", // Placeholder
+      demoLink: "https://digibouquet-tau.vercel.app/" // Placeholder
+    },
+    {
+      title: "Banking Chatbot Application",
+      technologies: ["Python", "Flask"],
+      description: [
+        "Designed and developed a chatbot to handle basic banking-related user queries.",
+        "Implemented backend logic using Flask for request handling and responses."
+      ],
+    },
+    {
+      title: "Akshara – Bilingual Blogging Platform",
+      technologies: ["Antigravity Platform", "Next.js", "MongoDB", "Tailwind CSS"],
+      description: [
+        "Built and deployed a bilingual (English–Kannada) blogging platform using the Antigravity development platform with Next.js architecture.",
+        "Configured content models, authentication, and admin dashboard for post management including image uploads and rich text editing.",
+        "Customized UI, dark/light theme, and SEO settings to improve accessibility and performance."
+      ],
+      githubLink: "https://github.com/Thanuprakashgowda/Akshara", // Placeholder
       demoLink: "" // Placeholder
     }
   ],

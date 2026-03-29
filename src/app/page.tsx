@@ -18,13 +18,15 @@ export default function Home() {
         <AboutSection />
       </main>
       
-      <div className="w-full border-y border-gray-100">
+      <div className="w-full border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-6">
           <EducationSection />
         </div>
       </div>
       
-      <div className="w-full bg-gray-50/50 border-b border-gray-100">
+
+      
+      <div className="w-full border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6">
           <SkillsSection />
         </div>
@@ -39,6 +41,8 @@ export default function Home() {
           <CertificationsSection />
         </div>
       </div>
+
+
       
       <main className="flex-1 w-full max-w-5xl mx-auto px-6">
         <ContactSection />

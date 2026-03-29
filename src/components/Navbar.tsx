@@ -21,6 +21,9 @@ export default function Navbar() {
             <Link href="#projects" className="hover:text-blue-600 transition-colors">Projects</Link>
           </li>
           <li>
+            <Link href="#experience" className="hover:text-blue-600 transition-colors">Achievements</Link>
+          </li>
+          <li>
             <Link href="#contact" className="hover:text-blue-600 transition-colors">Contact</Link>
           </li>
         </ul>

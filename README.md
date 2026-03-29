@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Thanuprakash Gowda - Personal Portfolio ✨
 
-## Getting Started
+A modern, responsive, and performance-optimized personal portfolio web application to showcase my skills, projects, and academic background as an Information Science & Technology student.
 
-First, run the development server:
+![Portfolio Live Preview Placeholder](https://via.placeholder.com/800x400.png?text=Thanuprakash+Gowda+Portfolio)
+
+## 🚀 Built With
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Icons**: SVG / Hand-crafted Layouts
+- **Deployment**: Local / Vercel optimized
+
+## 🌟 Key Features
+- **Dynamic Data Structure**: All content is managed securely via a single source of truth (`src/data/portfolio.ts`), allowing instant updates without risking UI bugs.
+- **Server-Side Rendered & SEO Optimized**: Next.js App Router for top-tier indexing.
+- **Fully Responsive**: A fluid design system that intelligently scales typography, images, and card layouts seamlessly across mobile, tablet, and desktop viewports.
+- **Native Direct Contact Handler**: An embedded Contact section logic that triggers a completely driverless, safe `mailto:` command to natively parse client requests.
+
+## 🛠️ Local Development
+
+First, ensure you have Node.js installed. Then clone this repository and install dependencies:
 
 ```bash
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the live site. 
+The components auto-hot reload as you edit the local files.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Repository Structure
+```
+📂 src/
+ ┣ 📂 app/        # Next.js App Router root & Global CSS
+ ┣ 📂 components/ # Reusable UI pieces (Navbar, Footer, Section Headers)
+ ┃ ┗ 📂 sections/ # Core page blocks (Hero, About, Education, Skills, Projects, Certifications, Contact)
+ ┣ 📂 data/       # `portfolio.ts` - Central database file for content
+ ┗ ...
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📫 Get in Touch
+- **Email**: thanuprakashgowda13@gmail.com
+- **LinkedIn**: [linkedin.com/in/thanuprakash-gowda](https://www.linkedin.com/in/thanuprakash-gowda)
+- **Location**: Karnataka, India

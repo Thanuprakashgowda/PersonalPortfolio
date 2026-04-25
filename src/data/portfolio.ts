@@ -11,7 +11,7 @@ export const portfolioData = {
     github: "github.com/Thanuprakashgowda",
     role: "Information Science & Technology Student",
     objective: "Information Science and Technology engineering student with a growing interest in full stack development and data analytics. Seeking opportunities to apply programming fundamentals, deployment practices, and analytical thinking while continuously learning and building applications on vibe coding platforms.",
-    resumeUrl: "https://drive.google.com/file/d/1F_V3tamNhjRioOeG1thKeUfDp1jeZDre/view?usp=sharing"
+    resumeUrl: "https://drive.google.com/file/d/1veYg97Qel5x-lpKULWxcjnWUOz4ycG9H/view?usp=sharing"
   },
   education: [
     {
@@ -57,6 +57,18 @@ export const portfolioData = {
   ],
   projects: [
     {
+      title: "Monsoon ML: Indian Rainfall Predictor",
+      technologies: ["Python", "scikit-learn", "XGBoost", "pandas", "numpy", "Streamlit", "Plotly", "Folium"],
+      description: [
+        "Developed an end-to-end machine learning pipeline to predict monthly rainfall across 36 meteorological subdivisions in India.",
+        "Engineered advanced features including lag variables (T-1, T-2, T-3), rolling statistics, and seasonal Fourier transformations to capture monsoon patterns.",
+        "Built ensemble models using Random Forest and XGBoost to model complex non-linear climate relationships.",
+        "Designed and deployed an interactive Streamlit dashboard with geospatial visualization, feature importance insights, and real-time prediction interface."
+      ],
+      githubLink: "https://github.com/Thanuprakashgowda/monsoon-ml",
+      demoLink: "https://monsoonprediction.streamlit.app/"
+    },
+    {
       title: "HostelHub (Runner-Up)",
       technologies: ["Python", "Flask", "MySQL", "REST APIs", "Postman"],
       description: [
@@ -76,7 +88,7 @@ export const portfolioData = {
         "Constructed intuitive reporting dashboards using Chart.js to visually map administrative data."
       ],
       githubLink: "https://github.com/Thanuprakashgowda/Cloud-management-system", // Placeholder
-      demoLink: "https://cloud-management-system-black.vercel.app/" // Placeholder
+      demoLink: "https://cloudmanagementsystem.vercel.app/" // Placeholder
     },
     {
       title: "IoT-Based Food Freshness Monitoring System",
@@ -95,7 +107,7 @@ export const portfolioData = {
         "Achieved near-instant deployment cycles using continuous delivery and strict TypeScript adherence."
       ],
       githubLink: "https://github.com/Thanuprakashgowda/digibouquet", // Placeholder
-      demoLink: "https://digibouquet-tau.vercel.app/" // Placeholder
+      demoLink: "https://pocketpetals.vercel.app/" // Placeholder
     },
     {
       title: "Banking Chatbot Application",
@@ -118,12 +130,27 @@ export const portfolioData = {
     }
   ],
   certifications: [
-    "NPTEL – Programming in Java (Elite), IIT Kharagpur, Jan–Apr 2025",
-    "Introduction to MongoDB – Certification, 2025 (Topics: NoSQL concepts, CRUD operations, data modeling, aggregation framework, and indexing for performance optimization.)",
-    "Self-learning through online platforms"
+    {
+      name: "NPTEL – Programming in Java (Elite), IIT Kharagpur, Jan–Apr 2025",
+      link: "https://drive.google.com/file/d/19pnkPL7RK0aZlmA85zqO_nn__sNagkgK/view"
+    },
+    {
+      name: "Introduction to MongoDB – Certification, 2025 (Topics: NoSQL concepts, CRUD operations, data modeling, aggregation framework, and indexing for performance optimization.)",
+      link: "https://learn.mongodb.com/c/Fw-wdPbHTOSrwassuwPbSw"
+    },
+    {
+      name: "EF SET B2 English",
+      link: "https://cert.efset.org/DnMbX2"
+    },
+    {
+      name: "Google Prompting Essentials (Badge)",
+      link: "https://www.credly.com/badges/e88688bd-c62a-4e5b-ab17-8e2504c45d4d/linked_in_profile"
+    },
   ],
   achievements: [
     "Runner-Up in the Full Stack Development domain at CEATHERION 2025 – 24-hour Hackathon, Canara Engineering College (Nov 2025)",
+    "Regional Finalist TCS TechBytes 2026 (National Level Technology Quiz)",
+    "Actively participated in Aetherion26 during AAKRITI 2026, a National Level Techno Cultural Fest at Canara Engineering College ",
     "Actively practicing Fundamentals of Computer Science on online platforms",
     "Participated in technical mini-project evaluations and presentations"
   ],

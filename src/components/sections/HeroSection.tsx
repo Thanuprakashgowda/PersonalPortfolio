@@ -17,7 +17,7 @@ export default function HeroSection() {
           </h2>
 
           <p className="text-lg text-white/80 leading-relaxed max-w-xl md:max-w-2xl mt-8 whitespace-pre-line">
-            I'm an <strong>{role}</strong>. <br /><br />
+            I&apos;m an <strong>{role}</strong>. <br /><br />
             {objective}
           </p>
 

@@ -13,9 +13,9 @@ export default function ContactSection() {
 
         <div className="grid md:grid-cols-2 gap-12 mt-12">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">Let's connect</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s connect</h3>
             <p className="text-gray-300 mb-8 max-w-sm leading-relaxed">
-              I'm currently open for new opportunities. If you have a question,feel free to reach out!
+              I&apos;m currently open for new opportunities. If you have a question,feel free to reach out!
             </p>
 
           <div className="space-y-4">

@@ -6,19 +6,19 @@ export const portfolioData = {
     name: "Thanuprakash Gowda",
     location: "Hassan, Karnataka, India",
     phone: "7204821605",
-    email: "thanuprakashgowda13@gmail.com",
+    email: "thanuprakashgowda13@gmail.com ",
     linkedin: "www.linkedin.com/in/thanuprakash-gowda",
     github: "github.com/Thanuprakashgowda",
     role: "Information Science & Technology Student",
     objective: "Information Science and Technology engineering student with a growing interest in full stack development and data analytics. Seeking opportunities to apply programming fundamentals, deployment practices, and analytical thinking while continuously learning and building applications on vibe coding platforms.",
-    resumeUrl: "https://drive.google.com/file/d/1veYg97Qel5x-lpKULWxcjnWUOz4ycG9H/view?usp=sharing"
+    resumeUrl: "https://drive.google.com/file/d/1AaVEWMJ2wFvAhZLdR5XyW5rsi3NwOTAg/view?usp=drive_link"
   },
   education: [
     {
       degree: "Bachelor of Engineering (B.E.) – Information Science & Technology",
       institution: "Canara Engineering College, Mangaluru",
       graduation: "Expected Graduation: 2027",
-      score: "CGPA: 7.76"
+      score: "CGPA: 7.95"
     },
     {
       degree: "Pre-University (PUC)",
@@ -44,11 +44,11 @@ export const portfolioData = {
     },
     {
       category: "Databases",
-      items: ["SQL", "MongoDB"]
+      items: ["MySQL", "MongoDB"]
     },
     {
       category: "Core Concepts",
-      items: ["DBMS", "Operating Systems", "Computer Networks", "Cloud Computing Fundamentals", "Data structures&algorithms", "Machine Learning", "Theory of computation"]
+      items: ["DBMS", "Operating Systems", "Computer Networks", "Cloud Computing Fundamentals", "Data structures&algorithms", "Machine Learning", "Theory of computation", "Artificial Intelligence"]
     },
     {
       category: "Tools",
@@ -145,6 +145,10 @@ export const portfolioData = {
     {
       name: "Google Prompting Essentials (Badge)",
       link: "https://www.credly.com/badges/e88688bd-c62a-4e5b-ab17-8e2504c45d4d/linked_in_profile"
+    },
+    {
+      name: "AWS AI Practitioner Challenge",
+      link: "https://www.udacity.com/certificate/e/ad6b83ec-2ba8-11f1-9e28-236d80e36ec0"
     },
   ],
   achievements: [

@@ -12,6 +12,9 @@ export default function Navbar() {
             <Link href="#about" className="hover:text-blue-600 transition-colors">About</Link>
           </li>
           <li>
+            <Link href="#experience" className="hover:text-blue-600 transition-colors">Experience</Link>
+          </li>
+          <li>
             <Link href="#education" className="hover:text-blue-600 transition-colors">Education</Link>
           </li>
           <li>
@@ -21,7 +24,7 @@ export default function Navbar() {
             <Link href="#projects" className="hover:text-blue-600 transition-colors">Projects</Link>
           </li>
           <li>
-            <Link href="#experience" className="hover:text-blue-600 transition-colors">Achievements</Link>
+            <Link href="#achievements" className="hover:text-blue-600 transition-colors">Achievements</Link>
           </li>
           <li>
             <Link href="#contact" className="hover:text-blue-600 transition-colors">Contact</Link>

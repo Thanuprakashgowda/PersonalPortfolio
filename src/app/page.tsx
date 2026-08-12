@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
 import EducationSection from "@/components/sections/EducationSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
@@ -18,6 +19,12 @@ export default function Home() {
       <main className="flex-1 w-full max-w-5xl mx-auto px-6">
         <AboutSection />
       </main>
+
+      <div className="w-full bg-gray-50/50 border-t border-gray-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <ExperienceSection />
+        </div>
+      </div>
       
       <div className="w-full border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-6">

@@ -5,7 +5,7 @@ export default function CertificationsSection() {
   const { certifications, achievements } = portfolioData;
 
   return (
-    <section id="experience" className="py-24 bg-gray-50/50">
+    <section id="achievements" className="py-24 bg-gray-50/50">
       <SectionHeading>Learning & Achievements</SectionHeading>
 
       <div className="grid md:grid-cols-2 gap-12 mt-12">

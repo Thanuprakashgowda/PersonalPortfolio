@@ -6,8 +6,8 @@ import SectionHeading from "../SectionHeading";
 export default function ContactSection() {
   const { email, phone, location, linkedin, github } = portfolioData.personalInfo;
 
-  const linkedinUrl = linkedin.startsWith("http") ? linkedin : `https://${linkedin}`;
-  const githubUrl = github.startsWith("http") ? github : `https://${github}`;
+  const linkedinUrl = linkedin.trim().startsWith("http") ? linkedin.trim() : `https://${linkedin.trim()}`;
+  const githubUrl = github.trim().startsWith("http") ? github.trim() : `https://${github.trim()}`;
 
   return (
     <section id="contact" className="footer-gradient pt-32 pb-24 px-6 mt-12 w-full">

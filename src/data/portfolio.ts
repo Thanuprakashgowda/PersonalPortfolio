@@ -136,7 +136,7 @@ export const portfolioData = {
         "Implemented an admin analytics dashboard and workflow management to streamline grievance resolution.",
         "Runner-Up at CEATHERION 2025 24-hour Full Stack Hackathon, Canara Engineering College."
       ],
-      githubLink: "https://github.com/Thanuprakashgowda/HSH",
+      githubLink: "https://github.com/Thanuprakashgowda/Hostel-complaint-system",
       demoLink: ""
     },
     {

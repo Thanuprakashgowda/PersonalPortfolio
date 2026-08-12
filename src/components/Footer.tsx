@@ -3,8 +3,8 @@ import { portfolioData } from "@/data/portfolio";
 export default function Footer() {
   const { linkedin, github, name } = portfolioData.personalInfo;
 
-  const linkedinUrl = linkedin.startsWith("http") ? linkedin : `https://${linkedin}`;
-  const githubUrl = github.startsWith("http") ? github : `https://${github}`;
+  const linkedinUrl = linkedin.trim().startsWith("http") ? linkedin.trim() : `https://${linkedin.trim()}`;
+  const githubUrl = github.trim().startsWith("http") ? github.trim() : `https://${github.trim()}`;
 
   return (
     <footer className="bg-gray-50 border-t border-gray-100 py-8 mt-24">

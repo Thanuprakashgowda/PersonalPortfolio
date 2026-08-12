@@ -3,8 +3,8 @@ import { portfolioData } from "@/data/portfolio";
 
 export default function HeroSection() {
   const { name, role, objective, resumeUrl, linkedin, github } = portfolioData.personalInfo;
-  const linkedinUrl = linkedin.startsWith("http") ? linkedin : `https://${linkedin}`;
-  const githubUrl = github.startsWith("http") ? github : `https://${github}`;
+  const linkedinUrl = linkedin.trim().startsWith("http") ? linkedin.trim() : `https://${linkedin.trim()}`;
+  const githubUrl = github.trim().startsWith("http") ? github.trim() : `https://${github.trim()}`;
 
   return (
     <section id="hero" className="hero-gradient min-h-[100vh] flex flex-col justify-center pt-20 pb-32 px-6">

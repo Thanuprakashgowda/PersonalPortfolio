@@ -4,7 +4,10 @@ import { portfolioData } from "@/data/portfolio";
 import SectionHeading from "../SectionHeading";
 
 export default function ContactSection() {
-  const { email, phone, location } = portfolioData.personalInfo;
+  const { email, phone, location, linkedin, github } = portfolioData.personalInfo;
+
+  const linkedinUrl = linkedin.startsWith("http") ? linkedin : `https://${linkedin}`;
+  const githubUrl = github.startsWith("http") ? github : `https://${github}`;
 
   return (
     <section id="contact" className="footer-gradient pt-32 pb-24 px-6 mt-12 w-full">
@@ -15,7 +18,7 @@ export default function ContactSection() {
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s connect</h3>
             <p className="text-gray-300 mb-8 max-w-sm leading-relaxed">
-              I&apos;m currently open for new opportunities. If you have a question,feel free to reach out!
+              I&apos;m currently open for new opportunities. If you have a question, feel free to reach out!
             </p>
 
           <div className="space-y-4">
@@ -38,6 +41,20 @@ export default function ContactSection() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               </div>
               <span>{location}</span>
+            </div>
+
+            <div className="flex items-center gap-4 text-gray-300">
+              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">LinkedIn Profile ↗</a>
+            </div>
+
+            <div className="flex items-center gap-4 text-gray-300">
+              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">GitHub Profile ↗</a>
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ export default function EducationSection() {
 
               {edu.coursework && edu.coursework.length > 0 && (
                 <div className="mt-4 pt-4 border-t border-gray-100">
-                  <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Relevant Coursework</p>
+                  <p className="text-xs font-semibold text-gray-600 mb-2">Relevant Coursework:</p>
                   <div className="flex flex-wrap gap-2">
                     {edu.coursework.map((course, i) => (
                       <span key={i} className="text-xs font-medium px-2.5 py-1 bg-blue-50/80 text-blue-700 rounded-md border border-blue-100">

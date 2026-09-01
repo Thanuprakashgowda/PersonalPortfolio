@@ -9,7 +9,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-24">
       <SectionHeading>Projects</SectionHeading>
       
-      <div className="grid md:grid-cols-2 gap-8 mt-12">
+      <div className="grid md:grid-cols-2 gap-8 mt-12 items-stretch">
         {projects.map((project, index) => (
           <ProjectCard 
             key={index}

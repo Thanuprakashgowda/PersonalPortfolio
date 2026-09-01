@@ -31,38 +31,40 @@ export interface ProjectItem {
 
 export interface CertificationItem {
   name: string;
+  issuer?: string;
+  date?: string;
   link?: string;
 }
 
 export const portfolioData = {
   personalInfo: {
     name: "Thanuprakash Gowda",
-    location: "Hassan, Karnataka, India",
+    location: "Holenarasipura / Hassan, Karnataka, India",
     phone: "+91 7204821605",
     email: "thanuprakashgowda13@gmail.com",
     linkedin: "https://www.linkedin.com/in/thanuprakash-gowda",
     github: "https://github.com/Thanuprakashgowda",
     role: "Information Science & Engineering Student",
-    objective: "Final-year Information Science and Engineering student with hands-on experience building full-stack applications, AI-enabled systems, REST APIs, and machine learning solutions. Skilled in Python, Java, SQL, Flask, Node.js, Express.js, MySQL, MongoDB, Scikit-learn, Gemini AI, and Vercel. Experienced in AI model evaluation, backend development, ML decision support systems, and data-driven applications.",
+    objective: "Final-year Information Science and Engineering student with hands-on experience building full-stack applications, AI-enabled systems, REST APIs, and machine learning solutions. Skilled in Python, Java, SQL, Flask, Next.js, Node.js, Express.js, MySQL, MongoDB, Scikit-learn, Gemini AI, Power BI, Tableau, and Vercel. Experienced in AI model evaluation, backend development, ML decision-support systems, and rapid AI-assisted development (vibe coding).",
     resumeUrl: "https://drive.google.com/file/d/1AaVEWMJ2wFvAhZLdR5XyW5rsi3NwOTAg/view?usp=drive_link"
   },
   experience: [
     {
       role: "Freelance AI Trainer",
       company: "Outlier AI",
-      period: "Jun 2026 – Present",
+      period: "Jun 2026 – Aug 2026",
       location: "Remote",
       description: [
-        "Evaluated and refined AI model outputs for quality, accuracy, logical reasoning, and linguistic correctness using defined guidelines.",
+        "Evaluated and refined AI model outputs for quality, accuracy, logical reasoning, and linguistic/policy compliance using structured guidelines.",
         "Performed data validation, anomaly detection, quality assurance, and documented findings to improve AI model performance.",
-        "Worked with structured guidelines while maintaining high reporting accuracy and productivity."
+        "Maintained high reporting accuracy, productivity, and rigorous evaluation standards across diverse domain prompts."
       ]
     }
   ] as ExperienceItem[],
   education: [
     {
-      degree: "B.E. Information Science & Engineering",
-      institution: "Canara Engineering College, Mangaluru",
+      degree: "Bachelor of Engineering (B.E.) Information Science & Engineering",
+      institution: "Canara Engineering College, Mangaluru, Karnataka",
       graduation: "2023 – 2027 (Expected)",
       score: "CGPA: 7.92 / 10",
       coursework: [
@@ -73,17 +75,17 @@ export const portfolioData = {
         "DBMS",
         "Computer Networks",
         "Operating Systems",
-        "Object-Oriented Programming"
+        "Object-Oriented Programming (OOP)"
       ]
     },
     {
-      degree: "Pre-University (PUC)",
+      degree: "Pre-University Course (PUC) – PCMB",
       institution: "Toppers PU College, Holenarasipura",
-      graduation: "Completed 2023",
+      graduation: "2021 – 2023",
       score: "86.33%"
     },
     {
-      degree: "SSLC",
+      degree: "Secondary School Leaving Certificate (SSLC)",
       institution: "Adarsha Vidyalaya, Holenarasipura",
       graduation: "Completed 2021",
       score: "91.36%"
@@ -92,27 +94,35 @@ export const portfolioData = {
   skills: [
     {
       category: "Programming Languages",
-      items: ["Python", "Java", "C", "SQL", "LaTeX", "JavaScript", "TypeScript"]
+      items: ["Python", "Java", "SQL", "C", "JavaScript", "TypeScript", "LaTeX"]
     },
     {
-      category: "Development & Web",
-      items: ["Flask", "Node.js", "Express.js", "Next.js", "REST APIs", "HTML", "CSS", "Tailwind CSS"]
+      category: "Frameworks & Web Development",
+      items: ["Next.js 15", "Flask", "Node.js", "Express.js", "REST APIs", "HTML5", "CSS3", "Tailwind CSS"]
     },
     {
       category: "AI & Machine Learning",
-      items: ["Machine Learning", "Scikit-learn", "Pandas", "NumPy", "Gemini AI", "RAG", "Prompt Engineering", "AI-Assisted Development"]
+      items: ["Machine Learning", "Scikit-learn", "Pandas", "NumPy", "Gemini AI", "Claude AI", "RAG", "Prompt Engineering", "AI Model Evaluation", "AI-Assisted Development (vibe coding)"]
     },
     {
       category: "Databases & Cloud",
-      items: ["MySQL", "MongoDB", "TiDB", "Vercel Postgres", "Vercel"]
+      items: ["MySQL", "MongoDB", "Vercel Postgres", "TiDB", "Vercel"]
     },
     {
-      category: "Tools & Analytics",
-      items: ["Git", "GitHub", "Postman", "VS Code", "Google AI Studio", "Power BI", "Tableau", "Excel"]
+      category: "Analytics & Business Intelligence",
+      items: ["Power BI", "Tableau", "Excel", "Data Modeling", "Exploratory Data Analysis (EDA)", "Data Validation", "Dashboard Development"]
     },
     {
-      category: "Core CS & Systems",
-      items: ["Data Structures & Algorithms", "DBMS", "Operating Systems", "Computer Networks", "Cloud Computing & Security", "OOP"]
+      category: "Tools & Platforms",
+      items: ["Git", "GitHub", "Postman", "VS Code", "Google AI Studio", "Arduino IDE", "Antigravity"]
+    },
+    {
+      category: "Core Computer Science",
+      items: ["Data Structures & Algorithms (DSA)", "Database Management Systems (DBMS)", "Operating Systems", "Computer Networks", "Cloud Computing & Security", "OOP"]
+    },
+    {
+      category: "Soft Skills",
+      items: ["Problem-solving", "Teamwork & Collaboration", "Communication", "Time Management", "Adaptability & Flexibility", "Innovation & Continuous Learning"]
     }
   ] as SkillCategory[],
   projects: [
@@ -131,21 +141,32 @@ export const portfolioData = {
       title: "HostelHub – Full-Stack Complaint Management System",
       technologies: ["Python", "Flask", "MySQL", "REST APIs", "Postman"],
       description: [
-        "Developed a hostel complaint management platform with role-based authentication for students and administrators.",
-        "Built RESTful APIs for complaint tracking, status updates, image uploads, and real-time communication through comments.",
-        "Implemented an admin analytics dashboard and workflow management to streamline grievance resolution.",
+        "Developed a scalable hostel complaint management platform with role-based authentication for students and administrators.",
+        "Built RESTful APIs enabling complaint tracking, status updates, image uploads, and real-time communication via comments.",
+        "Implemented admin analytics dashboard and workflow management for efficient grievance resolution.",
         "Runner-Up at CEATHERION 2025 24-hour Full Stack Hackathon, Canara Engineering College."
       ],
-      githubLink: "https://github.com/Thanuprakashgowda/Hostel-complaint-system",
+      githubLink: "https://github.com/Thanuprakashgowda/HSH",
       demoLink: ""
+    },
+    {
+      title: "PocketPetals",
+      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Vercel Postgres", "Antigravity"],
+      description: [
+        "Developed a full-stack web application for creating and sharing personalized digital flower bouquets with animated delivery using Next.js 15, TypeScript, and Tailwind CSS.",
+        "Implemented shareable link system with server-side rendering to generate unique animated bouquet experiences for recipients.",
+        "Built scalable backend using Vercel Postgres with local JSON fallback and created a high-quality SVG-based botanical flower library."
+      ],
+      githubLink: "https://github.com/Thanuprakashgowda/digibouquet",
+      demoLink: "https://pocketpetals.vercel.app/"
     },
     {
       title: "Machine Learning-Based Crop Rotation Optimization & Profitability Prediction",
       technologies: ["Python", "Machine Learning", "Scikit-learn", "Flask", "Power BI", "SQL"],
       description: [
         "Developed an ML-based decision-support system using soil parameters for crop recommendation and profitability prediction.",
-        "Performed data collection, cleaning, preprocessing, exploratory data analysis (EDA), feature engineering, and model evaluation.",
-        "Built interactive Power BI dashboards to visualize soil health, crop recommendations, and profitability trends.",
+        "Performed data collection, cleaning, preprocessing, exploratory data analysis (EDA), feature engineering, and predictive model evaluation.",
+        "Built interactive Power BI dashboards to visualize soil health, crop recommendations, KPIs, and profitability trends.",
         "Applied data validation and anomaly detection techniques to improve prediction accuracy."
       ],
       githubLink: "",
@@ -164,19 +185,18 @@ export const portfolioData = {
       demoLink: "https://monsoonprediction.streamlit.app/"
     },
     {
-      title: "DigiBouquet",
-      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Vercel Postgres", "Antigravity"],
+      title: "IoT-Based Food Freshness Monitoring System (Mini-Project)",
+      technologies: ["Python", "Arduino", "Sensors", "Streamlit"],
       description: [
-        "Engineered a dynamic, highly responsive modern web application focused on optimal UI/UX standards.",
-        "Leveraged Vercel Postgres to rapidly implement database abstraction layers for complex data persistence workflows.",
-        "Achieved near-instant deployment cycles using continuous delivery and strict TypeScript adherence."
+        "Developed a low-cost embedded IoT system to assess fruit and vegetable freshness using sensor data with Arduino and environmental sensors.",
+        "Displayed real-time freshness levels and readings through an interactive web-based dashboard using Streamlit."
       ],
-      githubLink: "https://github.com/Thanuprakashgowda/digibouquet",
-      demoLink: "https://pocketpetals.vercel.app/"
+      githubLink: "",
+      demoLink: ""
     },
     {
       title: "Akshara – Bilingual Blogging Platform",
-      technologies: ["Antigravity Platform", "Next.js", "MongoDB", "Tailwind CSS"],
+      technologies: ["Next.js", "MongoDB", "Tailwind CSS", "Antigravity"],
       description: [
         "Built and deployed a bilingual (English–Kannada) blogging platform using Next.js architecture.",
         "Configured content models, authentication, and admin dashboard for post management including image uploads and rich text editing.",
@@ -184,47 +204,50 @@ export const portfolioData = {
       ],
       githubLink: "https://github.com/Thanuprakashgowda/Akshara",
       demoLink: ""
-    },
-    {
-      title: "IoT-Based Food Freshness Monitoring System",
-      technologies: ["Arduino", "Sensors", "Python", "Streamlit"],
-      description: [
-        "Developed a low-cost embedded hardware system to continuously evaluate raw food freshness based on dynamic environmental sensor metrics.",
-        "Engineered a real-time tracking interface utilizing Python and Streamlit to display ongoing readings seamlessly."
-      ]
     }
   ] as ProjectItem[],
   certifications: [
     {
       name: "NPTEL – Programming in Java (Elite), IIT Kharagpur",
+      date: "Jan – Apr 2025",
       link: "https://drive.google.com/file/d/19pnkPL7RK0aZlmA85zqO_nn__sNagkgK/view"
     },
     {
       name: "Introduction to MongoDB – Certification (NoSQL, CRUD, Data Modeling, Indexing)",
+      date: "May 2025",
       link: "https://learn.mongodb.com/c/Fw-wdPbHTOSrwassuwPbSw"
     },
     {
-      name: "Google Prompting Essentials (Badge)",
+      name: "Google Prompting Essentials (Coursera)",
+      date: "Apr 2026",
       link: "https://www.credly.com/badges/e88688bd-c62a-4e5b-ab17-8e2504c45d4d/linked_in_profile"
     },
     {
-      name: "AWS AI Practitioner Challenge",
+      name: "AWS AI Practitioner Challenge (Udacity)",
+      date: "Jun 2026",
       link: "https://www.udacity.com/certificate/e/ad6b83ec-2ba8-11f1-9e28-236d80e36ec0"
     },
     {
-      name: "EF SET English Certificate (B2 Upper Intermediate)",
-      link: "https://cert.efset.org/DnMbX2"
+      name: "Fundamentals of Artificial Intelligence – Wadhwani Foundation",
+      date: "2026",
+      link: ""
     },
     {
-      name: "Claude 101 & Fundamentals of AI Certification",
+      name: "Claude 101 – Anthropic",
+      date: "2026",
       link: ""
+    },
+    {
+      name: "EF SET English Certificate (B2 Upper Intermediate)",
+      date: "2025",
+      link: "https://cert.efset.org/DnMbX2"
     }
   ] as CertificationItem[],
   achievements: [
-    "Runner-Up in Full Stack Development – CEATHERION 2025 24-hour Hackathon, Canara Engineering College",
-    "Regional Finalist – TCS TechBytes 2026 National-Level Technology Quiz",
-    "Active participant in Aetherion26 during AAKRITI 2026 National Level Techno Cultural Fest",
-    "Actively practicing core Computer Science & system design concepts on online platforms"
+    "Runner-Up in the Full Stack Development domain at CEATHERION 2025 24-hour Hackathon, Canara Engineering College (Nov 2025); developed and presented a working Full Stack solution under time constraints.",
+    "Regional Finalist – TCS TechBytes 2026 (National Level Technology Quiz).",
+    "Active participant in Aetherion26 during AAKRITI 2026 National Level Techno Cultural Fest.",
+    "Actively solving challenges in Data Structures & Algorithms, Database Systems, and System Design on online competitive platforms."
   ],
   languages: ["English", "Kannada", "Hindi"]
 };

@@ -19,12 +19,19 @@ export default function CertificationsSection() {
               <li key={index} className="flex gap-4 items-start">
                 <span className="w-2 h-2 rounded-full bg-blue-600 mt-2 flex-shrink-0"></span>
                 <span className="text-gray-800 leading-relaxed flex flex-col">
-                  <span>{cert.name}</span>
-                  {cert.link && (
-                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-sm hover:underline mt-0.5">
-                      View Certificate ↗
-                    </a>
-                  )}
+                  <span className="font-medium text-gray-900">{cert.name}</span>
+                  <div className="flex items-center gap-3 mt-1">
+                    {cert.date && (
+                      <span className="text-xs font-semibold px-2 py-0.5 bg-gray-100 text-gray-600 rounded">
+                        {cert.date}
+                      </span>
+                    )}
+                    {cert.link && (
+                      <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs font-medium hover:underline flex items-center gap-1">
+                        View Certificate ↗
+                      </a>
+                    )}
+                  </div>
                 </span>
               </li>
             ))}

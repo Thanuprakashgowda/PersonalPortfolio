@@ -95,23 +95,19 @@ export const portfolioData = {
   skills: [
     {
       category: "Programming Languages",
-      items: ["Python", "Java", "SQL", "C", "JavaScript", "TypeScript", "LaTeX"]
+      items: ["Kotlin", "Python", "Java", "SQL", "C", "JavaScript", "TypeScript", "LaTeX"]
+    },
+    {
+      category: "Mobile & Frameworks",
+      items: ["Android (Kotlin)", "Jetpack Compose", "Material 3", "Room DB", "CameraX", "Next.js 15", "Tailwind CSS", "HTML5", "CSS3"]
     },
     {
       category: "AI / LLM & Machine Learning",
-      items: ["Machine Learning", "Generative AI", "Gemini AI", "Claude AI", "RAG Concepts", "Prompt Engineering", "AI Model Evaluation", "Scikit-learn", "Pandas", "NumPy", "Human-in-the-Loop Verification"]
+      items: ["On-Device ML", "Gemini LLM", "Claude AI", "Scikit-learn", "Pandas", "NumPy", "RAG Concepts", "Prompt Engineering", "AI Model Evaluation", "Human-in-the-Loop Verification"]
     },
     {
-      category: "Backend & APIs",
-      items: ["Node.js", "Express.js", "Flask", "REST APIs", "JWT", "bcrypt", "API Testing (Postman)", "Debugging"]
-    },
-    {
-      category: "Frameworks & Web Development",
-      items: ["Next.js 15", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"]
-    },
-    {
-      category: "Databases & Cloud",
-      items: ["MySQL", "MongoDB", "TiDB", "Vercel Postgres", "Vercel"]
+      category: "Backend & Cloud Services",
+      items: ["Node.js", "Express.js", "Flask", "REST APIs", "JWT", "Firebase Firestore", "MySQL", "MongoDB", "TiDB", "Vercel Postgres"]
     },
     {
       category: "Analytics & Business Intelligence",
@@ -119,7 +115,7 @@ export const portfolioData = {
     },
     {
       category: "Developer Tools & Platforms",
-      items: ["Antigravity", "Git", "GitHub", "Postman", "VS Code", "Google AI Studio", "Arduino IDE"]
+      items: ["Android Studio", "Antigravity", "Git", "GitHub", "Postman", "VS Code", "Google AI Studio", "Arduino IDE", "Vercel"]
     },
     {
       category: "Core Computer Science & Systems",
@@ -131,6 +127,19 @@ export const portfolioData = {
     }
   ] as SkillCategory[],
   projects: [
+    {
+      title: "Smart-Crop (Crop-chakra) – AI Precision Agriculture App",
+      technologies: ["Kotlin", "Jetpack Compose", "Material 3", "On-Device ML", "Gemini LLM", "Room DB", "Firebase", "CameraX"],
+      description: [
+        "Architected an offline-first native Android precision farming app featuring an on-device Random Forest model achieving 99.4% accuracy across 22 crops based on NPK, pH, Zinc, and climatic parameters.",
+        "Engineered ICAR soil fertility classification and Soil Quality Index (SQI 0–100) algorithms with automated, custom soil amendment prescriptions.",
+        "Implemented multi-factor yield estimation using ICRISAT models alongside real-time AGMARKNET commodity market pricing for farm profitability forecasting.",
+        "Integrated Gemini LLM conversational agronomist ('Krishi Mitra') and CameraX visual leaf disease diagnostics for instant multimodal field advisory.",
+        "Built Room Database with one-tap parameter restoration, Firebase Firestore cloud sync, bilingual English/Kannada UI, and native PDF report export."
+      ],
+      githubLink: "",
+      demoLink: ""
+    },
     {
       title: "Cloud SMS – AI-Powered Management & Analytics Platform",
       technologies: ["Node.js", "Express.js", "MySQL / TiDB", "Gemini AI", "JWT", "Vercel"],
@@ -153,18 +162,6 @@ export const portfolioData = {
         "Secured Runner-Up position in the CEATHERION 2025 24-hour Full Stack Hackathon, Canara Engineering College."
       ],
       githubLink: "https://github.com/Thanuprakashgowda/HSH",
-      demoLink: ""
-    },
-    {
-      title: "Smart Crop – AI-Based Crop Recommendation & Profitability Prediction",
-      technologies: ["Python", "Machine Learning", "Scikit-learn", "Flask", "Next.js", "TypeScript", "Power BI", "SQL", "REST APIs"],
-      description: [
-        "Developed an AI-driven decision-support system combining machine learning, data processing, backend APIs, and web application integration for crop recommendation and profitability prediction.",
-        "Implemented crop classification and recommendation using agricultural, soil, and environmental parameters.",
-        "Performed data preprocessing, feature engineering, predictive model evaluation, and application-level integration.",
-        "Built interactive Power BI dashboards to visualize soil health and profitability trends, exploring computer vision-based maturity detection as an extension."
-      ],
-      githubLink: "",
       demoLink: ""
     },
     {
@@ -245,7 +242,7 @@ export const portfolioData = {
     },
     {
       name: "EF SET English Certificate (B2 Upper Intermediate)",
-      date: "2025",
+      date: "2026",
       link: "https://cert.efset.org/DnMbX2"
     }
   ] as CertificationItem[],

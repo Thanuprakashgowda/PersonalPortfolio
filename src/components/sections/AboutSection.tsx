@@ -8,7 +8,7 @@ export default function AboutSection() {
 
       <div className="max-w-4xl text-gray-800 leading-relaxed space-y-4 text-base md:text-lg">
         <p>
-          I’m an Information Science &amp; Engineering student at Canara Engineering College, Mangaluru (CGPA: 7.95). I specialize in building full-stack applications, AI-enabled systems, REST APIs, and machine learning decision-support solutions.
+          I’m an Information Science &amp; Engineering student at Canara Engineering College, Mangaluru (CGPA: 7.92). I specialize in building full-stack applications, AI-enabled systems, REST APIs, and machine learning decision-support solutions.
         </p>
         <p>
           Alongside software development, I work as a <strong>Freelance AI Trainer at Outlier AI</strong>, evaluating and refining complex AI model outputs for accuracy, logical reasoning, data quality, and policy compliance.

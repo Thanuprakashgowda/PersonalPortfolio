@@ -44,9 +44,9 @@ export const portfolioData = {
     email: "thanuprakashgowda13@gmail.com",
     linkedin: "https://www.linkedin.com/in/thanuprakash-gowda",
     github: "https://github.com/Thanuprakashgowda",
-    role: "Information Science & Engineering Student",
-    objective: "Final-year Information Science and Engineering student with hands-on experience building full-stack applications, AI-enabled systems, REST APIs, and machine learning solutions. Skilled in Python, Java, SQL, Flask, Next.js, Node.js, Express.js, MySQL, MongoDB, Scikit-learn, Gemini AI, Power BI, Tableau, and Vercel. Experienced in AI model evaluation, backend development, ML decision-support systems, and rapid AI-assisted development (vibe coding).",
-    resumeUrl: "https://drive.google.com/file/d/1AaVEWMJ2wFvAhZLdR5XyW5rsi3NwOTAg/view?usp=drive_link"
+    role: "Information Science & Engineering Undergraduate",
+    objective: "Information Science & Engineering undergraduate with hands-on experience building AI-integrated applications, REST APIs, machine learning systems, and data-driven solutions. Strong foundation in Python, Java, SQL, DSA, DBMS, Operating Systems, Computer Networks, and software engineering. Experienced in taking problem statements from data preprocessing and model evaluation to backend integration, human-in-the-loop AI verification, and deployable applications. Interested in AI/ML, agentic systems, real-time distributed systems, and 0-to-1 product engineering.",
+    resumeUrl: "https://drive.google.com/file/d/1SLGkZjyxJpG2a8K8Xh89HyKjQvzEJPz0/view?usp=sharing"
   },
   experience: [
     {
@@ -55,9 +55,10 @@ export const portfolioData = {
       period: "Jun 2026 – Aug 2026",
       location: "Remote",
       description: [
-        "Evaluated and refined AI model outputs for quality, accuracy, logical reasoning, and linguistic/policy compliance using structured guidelines.",
-        "Performed data validation, anomaly detection, quality assurance, and documented findings to improve AI model performance.",
-        "Maintained high reporting accuracy, productivity, and rigorous evaluation standards across diverse domain prompts."
+        "Evaluated and refined AI-generated outputs for factual accuracy, logical reasoning, quality, and linguistic/policy compliance using structured evaluation guidelines.",
+        "Contributed to the Aether project as a Kannada language specialist and Aether Generalist, performing human-in-the-loop verification.",
+        "Identified inconsistencies, anomalies, and quality issues and provided structured, traceable feedback for model improvement.",
+        "Applied analytical reasoning and systematic validation to assess AI behavior across diverse problem scenarios."
       ]
     }
   ] as ExperienceItem[],
@@ -65,7 +66,7 @@ export const portfolioData = {
     {
       degree: "Bachelor of Engineering (B.E.) Information Science & Engineering",
       institution: "Canara Engineering College, Mangaluru, Karnataka",
-      graduation: "2023 – 2027 (Expected)",
+      graduation: "2023 – 2027",
       score: "CGPA: 7.92 / 10",
       coursework: [
         "Data Structures & Algorithms",
@@ -97,42 +98,47 @@ export const portfolioData = {
       items: ["Python", "Java", "SQL", "C", "JavaScript", "TypeScript", "LaTeX"]
     },
     {
-      category: "Frameworks & Web Development",
-      items: ["Next.js 15", "Flask", "Node.js", "Express.js", "REST APIs", "HTML5", "CSS3", "Tailwind CSS"]
+      category: "AI / LLM & Machine Learning",
+      items: ["Machine Learning", "Generative AI", "Gemini AI", "Claude AI", "RAG Concepts", "Prompt Engineering", "AI Model Evaluation", "Scikit-learn", "Pandas", "NumPy", "Human-in-the-Loop Verification"]
     },
     {
-      category: "AI & Machine Learning",
-      items: ["Machine Learning", "Scikit-learn", "Pandas", "NumPy", "Gemini AI", "Claude AI", "RAG", "Prompt Engineering", "AI Model Evaluation", "AI-Assisted Development (vibe coding)"]
+      category: "Backend & APIs",
+      items: ["Node.js", "Express.js", "Flask", "REST APIs", "JWT", "bcrypt", "API Testing (Postman)", "Debugging"]
+    },
+    {
+      category: "Frameworks & Web Development",
+      items: ["Next.js 15", "HTML5", "CSS3", "Tailwind CSS", "Responsive Design"]
     },
     {
       category: "Databases & Cloud",
-      items: ["MySQL", "MongoDB", "Vercel Postgres", "TiDB", "Vercel"]
+      items: ["MySQL", "MongoDB", "TiDB", "Vercel Postgres", "Vercel"]
     },
     {
       category: "Analytics & Business Intelligence",
       items: ["Power BI", "Tableau", "Excel", "Data Modeling", "Exploratory Data Analysis (EDA)", "Data Validation", "Dashboard Development"]
     },
     {
-      category: "Tools & Platforms",
-      items: ["Git", "GitHub", "Postman", "VS Code", "Google AI Studio", "Arduino IDE", "Antigravity"]
+      category: "Developer Tools & Platforms",
+      items: ["Antigravity", "Git", "GitHub", "Postman", "VS Code", "Google AI Studio", "Arduino IDE"]
     },
     {
-      category: "Core Computer Science",
-      items: ["Data Structures & Algorithms (DSA)", "Database Management Systems (DBMS)", "Operating Systems", "Computer Networks", "Cloud Computing & Security", "OOP"]
+      category: "Core Computer Science & Systems",
+      items: ["Data Structures & Algorithms (DSA)", "Database Management Systems (DBMS)", "Operating Systems", "Computer Networks", "Cloud Computing & Security", "OOP", "Software Engineering"]
     },
     {
-      category: "Soft Skills",
-      items: ["Problem-solving", "Teamwork & Collaboration", "Communication", "Time Management", "Adaptability & Flexibility", "Innovation & Continuous Learning"]
+      category: "Soft Skills & Strengths",
+      items: ["Problem-solving", "Teamwork & Collaboration", "Communication", "Stakeholder Coordination", "Time Management", "Adaptability & Flexibility", "Continuous Learning"]
     }
   ] as SkillCategory[],
   projects: [
     {
-      title: "Cloud SMS – AI-Powered Management System",
+      title: "Cloud SMS – AI-Powered Management & Analytics Platform",
       technologies: ["Node.js", "Express.js", "MySQL / TiDB", "Gemini AI", "JWT", "Vercel"],
       description: [
-        "Developed a multi-tenant management system with secure data isolation and backend workflows for educational institutions.",
+        "Built a multi-tenant management system with secure data isolation for educational institutions.",
         "Integrated Gemini AI for chatbot functionality, automated dashboard insights, and personalized student-performance recommendations.",
-        "Implemented JWT/bcrypt authentication, attendance and academic result management, and PDF/Excel export functionality."
+        "Designed backend services and data workflows for attendance, academic results, and management operations with JWT/bcrypt authentication.",
+        "Implemented automated PDF/Excel export capabilities and secure cloud deployments."
       ],
       githubLink: "https://github.com/Thanuprakashgowda/Cloud-management-system",
       demoLink: "https://cloudmanagementsystem.vercel.app/"
@@ -141,36 +147,36 @@ export const portfolioData = {
       title: "HostelHub – Full-Stack Complaint Management System",
       technologies: ["Python", "Flask", "MySQL", "REST APIs", "Postman"],
       description: [
-        "Developed a scalable hostel complaint management platform with role-based authentication for students and administrators.",
-        "Built RESTful APIs enabling complaint tracking, status updates, image uploads, and real-time communication via comments.",
-        "Implemented admin analytics dashboard and workflow management for efficient grievance resolution.",
-        "Runner-Up at CEATHERION 2025 24-hour Full Stack Hackathon, Canara Engineering College."
+        "Developed a scalable complaint-management platform with role-based authentication for students and administrators.",
+        "Built RESTful APIs supporting complaint tracking, status updates, image uploads, and comment-based communication.",
+        "Implemented admin analytics and workflow management to streamline grievance resolution and reduce manual tracking effort.",
+        "Secured Runner-Up position in the CEATHERION 2025 24-hour Full Stack Hackathon, Canara Engineering College."
       ],
       githubLink: "https://github.com/Thanuprakashgowda/HSH",
       demoLink: ""
     },
     {
-      title: "PocketPetals",
-      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Vercel Postgres", "Antigravity"],
+      title: "Smart Crop – AI-Based Crop Recommendation & Profitability Prediction",
+      technologies: ["Python", "Machine Learning", "Scikit-learn", "Flask", "Next.js", "TypeScript", "Power BI", "SQL", "REST APIs"],
       description: [
-        "Developed a full-stack web application for creating and sharing personalized digital flower bouquets with animated delivery using Next.js 15, TypeScript, and Tailwind CSS.",
-        "Implemented shareable link system with server-side rendering to generate unique animated bouquet experiences for recipients.",
-        "Built scalable backend using Vercel Postgres with local JSON fallback and created a high-quality SVG-based botanical flower library."
-      ],
-      githubLink: "https://github.com/Thanuprakashgowda/digibouquet",
-      demoLink: "https://pocketpetals.vercel.app/"
-    },
-    {
-      title: "Machine Learning-Based Crop Rotation Optimization & Profitability Prediction",
-      technologies: ["Python", "Machine Learning", "Scikit-learn", "Flask", "Power BI", "SQL"],
-      description: [
-        "Developed an ML-based decision-support system using soil parameters for crop recommendation and profitability prediction.",
-        "Performed data collection, cleaning, preprocessing, exploratory data analysis (EDA), feature engineering, and predictive model evaluation.",
-        "Built interactive Power BI dashboards to visualize soil health, crop recommendations, KPIs, and profitability trends.",
-        "Applied data validation and anomaly detection techniques to improve prediction accuracy."
+        "Developed an AI-driven decision-support system combining machine learning, data processing, backend APIs, and web application integration for crop recommendation and profitability prediction.",
+        "Implemented crop classification and recommendation using agricultural, soil, and environmental parameters.",
+        "Performed data preprocessing, feature engineering, predictive model evaluation, and application-level integration.",
+        "Built interactive Power BI dashboards to visualize soil health and profitability trends, exploring computer vision-based maturity detection as an extension."
       ],
       githubLink: "",
       demoLink: ""
+    },
+    {
+      title: "PocketPetals – Full-Stack Web Application",
+      technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "Vercel Postgres", "Antigravity"],
+      description: [
+        "Built a full-stack web application for creating and sharing personalized digital flower bouquets with animated delivery using Next.js 15, TypeScript, and Tailwind CSS.",
+        "Implemented shareable-link system with server-side rendering (SSR) and a scalable Vercel Postgres backend with local JSON fallback.",
+        "Created a custom SVG-based botanical flower library and reusable UI components."
+      ],
+      githubLink: "https://github.com/Thanuprakashgowda/digibouquet",
+      demoLink: "https://pocketpetals.vercel.app/"
     },
     {
       title: "Monsoon ML: Indian Rainfall Predictor",
@@ -186,10 +192,10 @@ export const portfolioData = {
     },
     {
       title: "IoT-Based Food Freshness Monitoring System (Mini-Project)",
-      technologies: ["Python", "Arduino", "Sensors", "Streamlit"],
+      technologies: ["Arduino", "Sensors (Gas, Humidity, Temp)", "Python", "Streamlit"],
       description: [
-        "Developed a low-cost embedded IoT system to assess fruit and vegetable freshness using sensor data with Arduino and environmental sensors.",
-        "Displayed real-time freshness levels and readings through an interactive web-based dashboard using Streamlit."
+        "Built a low-cost embedded IoT system using Arduino and multiple sensors (gas, humidity, temperature) to assess produce freshness.",
+        "Engineered a real-time tracking interface utilizing Python and Streamlit to display ongoing readings and freshness levels seamlessly."
       ],
       githubLink: "",
       demoLink: ""

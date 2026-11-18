@@ -13,13 +13,14 @@ export default function SkillsSection() {
   const { skills } = portfolioData;
 
   const categoryIcons: Record<string, typeof CodeIcon> = {
+    "AI, LLMs & Response Evaluation": BrainIcon,
     "Programming Languages": CodeIcon,
-    "Mobile & Frontend Engineering": SmartphoneIcon,
-    "AI, Machine Learning & LLMs": BrainIcon,
-    "Backend, Databases & APIs": BriefcaseIcon,
-    "Data Analytics & Business Intelligence": SparklesIcon,
+    "Backend & API Engineering": BriefcaseIcon,
+    "Databases & Cloud Infrastructure": CodeIcon,
     "Developer Tools & Platforms": CodeIcon,
-    "Core CS & Systems": GraduationCapIcon,
+    "Research, Data Analytics & Project Support": SparklesIcon,
+    "Mobile & Frontend Engineering": SmartphoneIcon,
+    "Core Strengths & CS Fundamentals": GraduationCapIcon,
   };
 
   return (

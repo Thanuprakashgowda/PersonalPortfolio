@@ -1,4 +1,4 @@
-// Data extracted and enriched for Thanuprakash Gowda's portfolio
+// Enriched data synthesized from all professional resumes for Thanuprakash Gowda
 
 export interface ExperienceItem {
   role: string;
@@ -6,8 +6,8 @@ export interface ExperienceItem {
   period: string;
   location?: string;
   type?: string;
-  description: string[];
   skills?: string[];
+  description: string[];
 }
 
 export interface EducationItem {
@@ -27,7 +27,7 @@ export interface SkillCategory {
 
 export interface ProjectItem {
   title: string;
-  category: "Android & AI" | "Machine Learning" | "Full-Stack Web" | "IoT & Systems";
+  category: "AI & ML" | "Android & Mobile" | "Full-Stack Web" | "IoT & Systems";
   technologies: string[];
   description: string[];
   highlights?: string[];
@@ -54,15 +54,16 @@ export interface StatItem {
 export const portfolioData = {
   personalInfo: {
     name: "Thanuprakash Gowda",
-    role: "AI/ML & Full-Stack Systems Engineer",
-    status: "Available for Software Engineering & AI/ML Opportunities",
-    location: "Hassan / Mangaluru, Karnataka, India",
+    role: "AI/ML Developer & Full-Stack Systems Engineer",
+    status: "Available for Software Engineering, AI Evaluation & Freelance Roles",
+    location: "Hassan / Holenarasipura, Karnataka, India",
     phone: "+91 7204821605",
     email: "thanuprakashgowda13@gmail.com",
     linkedin: "https://www.linkedin.com/in/thanuprakash-gowda",
     github: "https://github.com/Thanuprakashgowda",
-    tagline: "Engineering intelligent on-device ML models, native Android experiences, and robust full-stack cloud architectures.",
-    objective: "Information Science & Engineering undergraduate at Canara Engineering College with proven expertise building on-device machine learning systems, native Android applications, RESTful backends, and AI evaluation pipelines. Experienced in translating complex problem statements from raw datasets to production-ready deployments, human-in-the-loop validation, and end-to-end software engineering.",
+    portfolioUrl: "https://thanugowdaportfolio.vercel.app",
+    tagline: "Engineering intelligent on-device ML models, LLM-powered applications, and robust full-stack software architectures.",
+    summary: "Information Science and Engineering undergraduate focused on AI-assisted software development, prompt engineering, AI evaluation, and LLM-powered applications. Hands-on experience evaluating AI-generated outputs for logical correctness and quality at TELUS Digital and Outlier AI, integrating Gemini AI and OpenAI into full-stack applications, and developing backend APIs with Python and JavaScript. Skilled in Antigravity, RAG concepts, structured guideline-based review, API testing, debugging, and human-in-the-loop verification.",
     resumeUrl: "https://drive.google.com/file/d/1SLGkZjyxJpG2a8K8Xh89HyKjQvzEJPz0/view?usp=sharing",
     stats: [
       {
@@ -71,9 +72,9 @@ export const portfolioData = {
         sub: "Random Forest across 22 crops"
       },
       {
-        value: "7+",
-        label: "Production & Academic Projects",
-        sub: "Android, AI/ML, Cloud & IoT"
+        value: "TELUS & Outlier",
+        label: "AI QA & Evaluation",
+        sub: "Human-in-the-loop LLM rating"
       },
       {
         value: "Runner-Up",
@@ -81,25 +82,38 @@ export const portfolioData = {
         sub: "24-hr Full-Stack Hackathon"
       },
       {
-        value: "AI Trainer",
-        label: "Outlier AI",
-        sub: "Human-in-the-loop LLM evaluation"
+        value: "8+",
+        label: "Engineered Projects",
+        sub: "AI/ML, Web, Mobile & IoT"
       }
     ] as StatItem[]
   },
   experience: [
     {
-      role: "Freelance AI Trainer & Evaluator",
+      role: "Quality Assurance Rater",
+      company: "TELUS Digital AI Data Solutions",
+      period: "Jul 2026 – Oct 2026",
+      location: "Remote",
+      type: "Freelance / Remote",
+      skills: ["AI Quality Assurance", "Data Validation", "Response Evaluation", "Guideline Adherence", "AI Model Quality", "Remote QA Rating"],
+      description: [
+        "Performed rigorous quality assurance rating work for AI data solutions following structured guidelines and quality expectations in a remote freelance capacity.",
+        "Benchmarked AI responses across factual correctness, tone, safety compliance, and intent fidelity to ensure high-quality dataset curation.",
+        "Applied attention to detail and consistent task completion under remote operational guidelines."
+      ]
+    },
+    {
+      role: "Freelance AI Trainer & Aether Generalist",
       company: "Outlier AI",
       period: "Jun 2026 – Aug 2026",
       location: "Remote",
-      type: "Contract / Specialized",
-      skills: ["Human-in-the-Loop", "LLM Evaluation", "Kannada NLP", "Logical Reasoning", "Model Alignment", "Quality Benchmarking"],
+      type: "Freelance / Remote",
+      skills: ["Human-in-the-Loop", "LLM Evaluation", "Audio Transcription", "Kannada NLP", "Logical Reasoning", "Model Alignment", "Anomaly Detection"],
       description: [
-        "Evaluated and refined cutting-edge AI model outputs for factual precision, multi-step logical reasoning, safety constraints, and linguistic compliance against rigorous rubrics.",
-        "Served as a Kannada Language Specialist and Aether Generalist, performing nuanced human-in-the-loop verification on multilingual and culturally grounded prompts.",
-        "Diagnosed hallucination patterns, edge-case reasoning errors, and policy violations, providing granular, actionable diagnostic logs to direct model fine-tuning.",
-        "Demonstrated systematic analytical rigor in benchmarking complex conversational and technical responses across diverse problem domains."
+        "Evaluated AI-generated responses for accuracy, logical reasoning, quality, and adherence to evaluation guidelines, performing human-in-the-loop verification.",
+        "Completed generalist and audio transcription tasks for AI training and evaluation workflows, maintaining consistent quality across submissions.",
+        "Identified inconsistencies, anomalies, and logical errors in model outputs and provided structured, traceable feedback to improve model performance.",
+        "Contributed to the Aether project as a Kannada Language Specialist and generalist evaluator, validating culturally and linguistically nuanced prompts."
       ]
     }
   ] as ExperienceItem[],
@@ -107,7 +121,7 @@ export const portfolioData = {
     {
       degree: "Bachelor of Engineering (B.E.) in Information Science & Engineering",
       institution: "Canara Engineering College, Mangaluru, Karnataka",
-      graduation: "2023 – 2027",
+      graduation: "2023 – 2027 (Expected)",
       score: "CGPA: 7.92 / 10",
       highlights: ["Affiliated to VTU Belagavi", "Active in Tech Clubs & Hackathons", "Runner-Up CEATHERION 2025"],
       coursework: [
@@ -138,45 +152,125 @@ export const portfolioData = {
   ] as EducationItem[],
   skills: [
     {
+      category: "AI, LLMs & Response Evaluation",
+      description: "Prompt engineering, verification rubrics, model alignment, and RAG concepts",
+      items: [
+        "Prompt Engineering",
+        "AI-Assisted Development",
+        "RAG Concepts",
+        "Gemini AI",
+        "OpenAI API",
+        "AI Model Evaluation",
+        "Human-in-the-Loop (HITL) Verification",
+        "Anti-Hallucination Prompt Schemas",
+        "Audio Transcription",
+        "AI Data Quality Assurance",
+        "Claude AI"
+      ]
+    },
+    {
       category: "Programming Languages",
-      description: "Core languages used across systems, mobile, and web development",
-      items: ["Kotlin", "Python", "Java", "SQL", "TypeScript", "JavaScript", "C", "LaTeX"]
+      description: "Core systems, application, and scripting languages",
+      items: ["Python", "JavaScript", "TypeScript", "Java", "Kotlin", "SQL", "C", "LaTeX"]
     },
     {
-      category: "Mobile & Frontend Engineering",
-      description: "Modern UI/UX, native Android architecture, and performant web apps",
-      items: ["Android SDK", "Jetpack Compose", "Material 3", "Room Database", "CameraX", "Next.js", "React", "Tailwind CSS", "HTML5/CSS3"]
+      category: "Backend & API Engineering",
+      description: "Server-side architectures, API design, testing, and debugging",
+      items: [
+        "Node.js",
+        "Express.js",
+        "Flask",
+        "REST APIs",
+        "JWT & bcrypt Auth",
+        "API Testing (Postman)",
+        "Debugging",
+        "PyMuPDF",
+        "Server Actions"
+      ]
     },
     {
-      category: "AI, Machine Learning & LLMs",
-      description: "Model building, on-device inference, prompt engineering, and verification",
-      items: ["On-Device ML", "Scikit-learn", "XGBoost", "Pandas", "NumPy", "Gemini LLM API", "Claude AI", "RAG Concepts", "Prompt Engineering", "Human-in-the-Loop Evaluation"]
-    },
-    {
-      category: "Backend, Databases & APIs",
-      description: "Scalable server architectures, relational and NoSQL storage",
-      items: ["Node.js", "Express.js", "Flask", "RESTful APIs", "JWT Auth", "Firebase Firestore", "MySQL", "MongoDB", "TiDB", "Vercel Postgres"]
-    },
-    {
-      category: "Data Analytics & Business Intelligence",
-      description: "Transforming datasets into actionable dashboards and insights",
-      items: ["Power BI", "Tableau", "Excel / Spreadsheets", "Exploratory Data Analysis (EDA)", "Geospatial Data (Folium)", "Data Modeling"]
+      category: "Databases & Cloud Infrastructure",
+      description: "Relational, NoSQL, and serverless data storage architectures",
+      items: [
+        "MySQL",
+        "MongoDB",
+        "TiDB",
+        "Vercel Postgres",
+        "Firebase Firestore",
+        "Room Database",
+        "Cloud Computing Fundamentals",
+        "Vercel Cloud"
+      ]
     },
     {
       category: "Developer Tools & Platforms",
-      description: "Dev environment, version control, and cloud hosting ecosystems",
-      items: ["Git", "GitHub", "Android Studio", "VS Code", "Postman", "Google AI Studio", "Vercel", "Antigravity", "Arduino IDE"]
+      description: "Development environments, agentic tooling, and deployment pipelines",
+      items: [
+        "Antigravity",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Postman",
+        "Vercel",
+        "Google AI Studio",
+        "Android Studio",
+        "Arduino IDE"
+      ]
     },
     {
-      category: "Core CS & Systems",
-      description: "Foundational computer science principles applied in practical engineering",
-      items: ["Data Structures & Algorithms", "DBMS & Indexing", "Operating Systems", "Computer Networks", "System Design Basics", "OOP Design Patterns"]
+      category: "Research, Data Analytics & Project Support",
+      description: "Data modeling, visualization, workflow support, and technical reporting",
+      items: [
+        "Research Methodology",
+        "Technical Documentation",
+        "Report Writing",
+        "Task & Issue Tracking",
+        "Workflow Support",
+        "Data Validation",
+        "Source Traceability",
+        "Exploratory Data Analysis (EDA)",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Power BI",
+        "Microsoft Excel",
+        "Folium & Plotly"
+      ]
+    },
+    {
+      category: "Mobile & Frontend Engineering",
+      description: "Native Android and modern responsive frontend frameworks",
+      items: [
+        "Android SDK",
+        "Jetpack Compose",
+        "Material 3",
+        "CameraX",
+        "Next.js 15",
+        "React",
+        "Tailwind CSS",
+        "HTML5 / CSS3"
+      ]
+    },
+    {
+      category: "Core Strengths & CS Fundamentals",
+      description: "Analytical problem solving and fundamental computer science",
+      items: [
+        "Data Structures & Algorithms (DSA)",
+        "DBMS & Indexing",
+        "Operating Systems",
+        "Computer Networks",
+        "Analytical Problem Solving",
+        "Critical Thinking",
+        "Attention to Detail",
+        "Time Management",
+        "Teamwork & Clear Communication"
+      ]
     }
   ] as SkillCategory[],
   projects: [
     {
       title: "Smart-Crop (Crop-chakra) – AI Precision Agriculture App",
-      category: "Android & AI",
+      category: "Android & Mobile",
       featured: true,
       badge: "Flagship / Native Android + On-Device ML",
       technologies: ["Kotlin", "Jetpack Compose", "Material 3", "On-Device ML", "Gemini LLM", "Room DB", "Firebase", "CameraX"],
@@ -197,49 +291,89 @@ export const portfolioData = {
       demoLink: ""
     },
     {
+      title: "CASELens – AI-Assisted Legal Document Research & Analysis",
+      category: "AI & ML",
+      featured: true,
+      badge: "AI Document Workbench / HITL",
+      technologies: ["Python", "Flask", "PyMuPDF", "OpenAI API", "Prompt Engineering", "JSON/Markdown"],
+      highlights: [
+        "Page-by-page text extraction pipeline with 1-indexed pagination & text-density scan audit",
+        "Strict anti-hallucination prompt schemas with 'Not found' fallbacks & source-page citations",
+        "Dual-pane verification interface with synchronized source-page jumping",
+        "Human-in-the-loop (HITL) audit checklist with structured Markdown/JSON report export"
+      ],
+      description: [
+        "Researched and developed a legal document analysis workbench using Flask, PyMuPDF, and the OpenAI API for structured information extraction from court filings.",
+        "Engineered a page-by-page text extraction pipeline preserving 1-indexed pagination and implemented text-density heuristics to audit and detect scanned/image-only PDFs.",
+        "Implemented strict anti-hallucination prompt schemas enforcing grounded fact extraction, 'Not found' fallbacks, and 1-indexed source-page citations for facts, issues, and precedents.",
+        "Built a dual-pane verification interface with synchronized source-page jumping, an interactive human-in-the-loop (HITL) validation audit checklist, and structured Markdown/JSON report export."
+      ],
+      githubLink: "https://github.com/Thanuprakashgowda",
+      demoLink: ""
+    },
+    {
       title: "Cloud SMS – AI-Powered Management & Analytics Platform",
       category: "Full-Stack Web",
       featured: true,
       badge: "Production SaaS / AI-Powered",
-      technologies: ["Node.js", "Express.js", "MySQL / TiDB", "Gemini AI", "JWT", "Tailwind CSS", "Vercel"],
+      technologies: ["Node.js", "Express.js", "Gemini AI", "MySQL / TiDB", "JWT", "Tailwind CSS", "Vercel"],
       highlights: [
-        "Multi-tenant institutional architecture with strict tenant data isolation",
-        "Gemini AI analytics agent for automated performance reports",
-        "Role-based access control with JWT and bcrypt security"
+        "Integrated Gemini AI for chatbot, automated dashboard insights & student-performance recommendations",
+        "Multi-tenant application with secure data isolation and JWT/bcrypt authentication",
+        "Database-driven features for attendance, academic results, and automated PDF/Excel exports"
       ],
       description: [
-        "Built a multi-tenant institutional management system with secure data isolation for educational and organizational bodies.",
-        "Integrated Gemini AI for conversational assistant functionality, automated dashboard insights, and personalized student-performance recommendations.",
-        "Designed backend services and data workflows for attendance, academic results, and administrative operations with JWT/bcrypt authentication.",
-        "Implemented automated PDF/Excel export capabilities and secure cloud deployments on Vercel."
+        "Integrated Gemini AI to build an intelligent chatbot, automated dashboard insights, and personalized student-performance recommendations.",
+        "Developed REST APIs and backend workflows for a multi-tenant application with secure data isolation and JWT/bcrypt authentication.",
+        "Designed database-driven features for attendance and academic results with automated PDF/Excel exports and deployed on Vercel."
       ],
       githubLink: "https://github.com/Thanuprakashgowda/Cloud-management-system",
       demoLink: "https://cloudmanagementsystem.vercel.app/"
     },
     {
-      title: "HostelHub – Full-Stack Grievance & Complaint Management",
+      title: "HostelHub – Full-Stack Grievance & Complaint Management System",
       category: "Full-Stack Web",
       featured: false,
-      badge: "🏆 CEATHERION 2025 Runner-Up",
+      badge: "🏆 Runner-Up, CEATHERION 2025",
       technologies: ["Python", "Flask", "MySQL", "REST APIs", "Postman", "Role-Based Auth"],
       highlights: [
-        "Built and presented in a 24-hour hackathon sprint",
-        "Real-time ticket lifecycle tracking and admin analytics",
-        "Awarded Runner-Up across 30+ engineering teams"
+        "Recognized as Runner-Up in the 24-hour CEATHERION 2025 Full Stack Hackathon",
+        "RESTful APIs for complaint tracking, status updates, image uploads & role-based access",
+        "Postman for rigorous API testing, debugging, and admin workflow resolution"
       ],
       description: [
-        "Developed a scalable complaint-management platform with role-based authentication for hostel residents and administration.",
-        "Built RESTful APIs supporting complaint tracking, status updates, image uploads, and comment-based resolution workflows.",
-        "Implemented admin analytics and status dashboards to streamline grievance resolution and reduce manual logging effort.",
-        "Secured Runner-Up position in the CEATHERION 2025 24-hour Full Stack Hackathon at Canara Engineering College."
+        "Developed RESTful APIs and backend workflows for complaint tracking, status updates, image uploads, and role-based access control.",
+        "Used Postman for API testing and debugging and built an administrator workflow to streamline complaint resolution.",
+        "Developed an admin analytics dashboard and workflow tools to support issue resolution and reporting.",
+        "Awarded Runner-Up across competitive collegiate engineering teams at the CEATHERION 2025 24-Hour Full Stack Hackathon, Canara Engineering College."
       ],
       githubLink: "https://github.com/Thanuprakashgowda/HSH",
       demoLink: ""
     },
     {
+      title: "Machine Learning-Based Crop Rotation Optimization & Profitability Prediction",
+      category: "AI & ML",
+      featured: false,
+      badge: "ML Decision Support / Agriculture",
+      technologies: ["Python", "Machine Learning", "Flask", "Scikit-learn", "Pandas", "NumPy"],
+      highlights: [
+        "ML-based decision support system for crop recommendation and profitability prediction",
+        "Exploratory data analysis on soil datasets containing pH, EC, OC, N, P, K, Zn, Cu, Fe, and Mn",
+        "Comparative model evaluation and structured R&D documentation covering experiments and findings"
+      ],
+      description: [
+        "Built an ML-based decision-support system for crop recommendation and profitability prediction using soil parameters.",
+        "Analysed soil datasets containing pH, EC, OC, N, P, K, Zn, Cu, Fe, and Mn parameters using comprehensive data preprocessing and exploratory data analysis.",
+        "Investigated machine learning approaches for crop recommendation and prediction and performed comparative model evaluation using relevant metrics.",
+        "Prepared structured project documentation covering problem definition, methodology, dataset analysis, experiments, results, and findings."
+      ],
+      githubLink: "https://github.com/Thanuprakashgowda",
+      demoLink: ""
+    },
+    {
       title: "Monsoon ML – Indian Rainfall Predictive Intelligence",
-      category: "Machine Learning",
-      featured: true,
+      category: "AI & ML",
+      featured: false,
       badge: "Geospatial ML / Time Series",
       technologies: ["Python", "Scikit-learn", "XGBoost", "Pandas", "NumPy", "Streamlit", "Plotly", "Folium"],
       highlights: [
@@ -316,33 +450,19 @@ export const portfolioData = {
     {
       name: "Programming in Java (Elite Certification)",
       issuer: "IIT Kharagpur / NPTEL",
-      date: "Jan – Apr 2025",
+      date: "2025",
       badge: "Elite Score",
       link: "https://drive.google.com/file/d/19pnkPL7RK0aZlmA85zqO_nn__sNagkgK/view"
     },
     {
-      name: "Introduction to MongoDB – Certified",
-      issuer: "MongoDB University",
-      date: "May 2025",
-      badge: "NoSQL & Indexing",
-      link: "https://learn.mongodb.com/c/Fw-wdPbHTOSrwassuwPbSw"
-    },
-    {
-      name: "Google Prompting Essentials",
-      issuer: "Google / Coursera",
-      date: "Apr 2026",
-      badge: "Prompt Engineering",
-      link: "https://www.credly.com/badges/e88688bd-c62a-4e5b-ab17-8e2504c45d4d/linked_in_profile"
-    },
-    {
       name: "AWS AI Practitioner Challenge",
       issuer: "Amazon Web Services / Udacity",
-      date: "Jun 2026",
+      date: "2026",
       badge: "Cloud AI",
       link: "https://www.udacity.com/certificate/e/ad6b83ec-2ba8-11f1-9e28-236d80e36ec0"
     },
     {
-      name: "Claude 101 – Prompting & Systems",
+      name: "Claude 101",
       issuer: "Anthropic",
       date: "2026",
       badge: "LLM Fundamentals",
@@ -356,6 +476,20 @@ export const portfolioData = {
       link: ""
     },
     {
+      name: "Google Prompting Essentials",
+      issuer: "Google / Coursera",
+      date: "2026",
+      badge: "Prompt Engineering",
+      link: "https://www.credly.com/badges/e88688bd-c62a-4e5b-ab17-8e2504c45d4d/linked_in_profile"
+    },
+    {
+      name: "Introduction to MongoDB – Certified",
+      issuer: "MongoDB University",
+      date: "2025",
+      badge: "NoSQL & Indexing",
+      link: "https://learn.mongodb.com/c/Fw-wdPbHTOSrwassuwPbSw"
+    },
+    {
       name: "EF SET English Certificate (B2 Upper Intermediate)",
       issuer: "EF Standard English Test",
       date: "2026",
@@ -365,9 +499,9 @@ export const portfolioData = {
   ] as CertificationItem[],
   achievements: [
     {
-      title: "Runner-Up – CEATHERION 2025 (24-Hour Full-Stack Hackathon)",
+      title: "Runner-Up – CEATHERION 2025 Full Stack Hackathon",
       organization: "Canara Engineering College (Nov 2025)",
-      description: "Designed, engineered, and pitched 'HostelHub', a full-stack student grievance resolution platform under high-pressure 24-hour sprint constraints across competitive collegiate teams."
+      description: "Developed and presented 'HostelHub', a full-stack complaint management and administrator workflow platform under intensive 24-hour sprint constraints across competitive collegiate engineering teams."
     },
     {
       title: "Regional Finalist – TCS TechBytes 2026",
@@ -377,7 +511,7 @@ export const portfolioData = {
     {
       title: "Active Contributor – Aetherion26 & AAKRITI 2026",
       organization: "National Level Techno-Cultural Fest",
-      description: "Coordinated technical events, project showcases, and student hackathons representing the Information Science department."
+      description: "Coordinated technical events, project showcases, and student hackathons representing the Information Science & Engineering department."
     },
     {
       title: "Competitive Problem Solving & Algorithmic Practice",
@@ -386,8 +520,19 @@ export const portfolioData = {
     }
   ],
   languages: [
+    { language: "Kannada", proficiency: "Native / Multilingual Specialist" },
     { language: "English", proficiency: "Professional (EF SET B2 Upper Intermediate)" },
-    { language: "Kannada", proficiency: "Native / Bilingual Specialist (Outlier AI)" },
     { language: "Hindi", proficiency: "Conversational" }
+  ],
+  coreStrengths: [
+    "Research Skills",
+    "Document Reading & Analysis",
+    "Attention to Detail",
+    "Data Validation",
+    "Analytical Problem Solving",
+    "Technical Documentation",
+    "Clear Communication",
+    "Accuracy & Integrity",
+    "Time Management"
   ]
 };

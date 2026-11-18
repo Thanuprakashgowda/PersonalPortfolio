@@ -11,7 +11,7 @@ import {
   CheckIcon 
 } from "../Icons";
 
-type CategoryFilter = "All" | "Android & AI" | "Machine Learning" | "Full-Stack Web" | "IoT & Systems";
+type CategoryFilter = "All" | "AI & ML" | "Android & Mobile" | "Full-Stack Web" | "IoT & Systems";
 
 export default function ProjectsSection() {
   const { projects } = portfolioData;
@@ -19,8 +19,8 @@ export default function ProjectsSection() {
 
   const categories: CategoryFilter[] = [
     "All",
-    "Android & AI",
-    "Machine Learning",
+    "AI & ML",
+    "Android & Mobile",
     "Full-Stack Web",
     "IoT & Systems",
   ];
@@ -38,13 +38,13 @@ export default function ProjectsSection() {
     <section id="projects" className="py-20 md:py-28">
       <SectionHeading
         eyebrow="Portfolio"
-        description="A selection of machine learning architectures, native mobile apps, and full-stack software."
+        description="A selection of machine learning architectures, legal AI research tools, native mobile apps, and full-stack software."
       >
         Featured Engineering Projects
       </SectionHeading>
 
       {/* Flagship Spotlight Project: Smart-Crop */}
-      {flagshipProject && (activeCategory === "All" || activeCategory === "Android & AI") && (
+      {flagshipProject && (activeCategory === "All" || activeCategory === "Android & Mobile") && (
         <div className="mb-12 relative bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-xl overflow-hidden">
           {/* Subtle Ambient Glow */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />

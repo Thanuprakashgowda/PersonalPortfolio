@@ -48,7 +48,7 @@ export default function HeroSection() {
               {tagline}
             </p>
             <p className="mt-2 text-sm sm:text-base text-slate-500 leading-relaxed">
-              Undergraduate at Canara Engineering College experienced in taking machine learning models from dataset curation to on-device native Android inference, AI verification pipelines at Outlier AI, and scalable full-stack applications.
+              Information Science &amp; Engineering undergraduate experienced in evaluating AI models for accuracy and quality at TELUS Digital and Outlier AI, developing grounded document analysis and on-device ML systems (CASELens, Smart-Crop), and building full-stack applications with Python, JavaScript, and modern cloud databases.
             </p>
 
             {/* Action Buttons */}

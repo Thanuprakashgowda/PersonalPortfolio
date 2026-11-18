@@ -1,111 +1,267 @@
 "use client";
 
+import { useState } from "react";
 import { portfolioData } from "@/data/portfolio";
 import SectionHeading from "../SectionHeading";
+import { 
+  MailIcon, 
+  PhoneIcon, 
+  MapPinIcon, 
+  LinkedinIcon, 
+  GithubIcon, 
+  CopyIcon, 
+  CheckIcon,
+  ExternalLinkIcon
+} from "../Icons";
 
 export default function ContactSection() {
   const { email, phone, location, linkedin, github } = portfolioData.personalInfo;
 
-  const linkedinUrl = linkedin.trim().startsWith("http") ? linkedin.trim() : `https://${linkedin.trim()}`;
-  const githubUrl = github.trim().startsWith("http") ? github.trim() : `https://${github.trim()}`;
+  const [copiedType, setCopiedType] = useState<string | null>(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const handleCopy = (text: string, type: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedType(type);
+    setTimeout(() => {
+      setCopiedType(null);
+    }, 2500);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const senderEmail = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(
+      `Portfolio Inquiry from ${name}`
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${senderEmail}\n\nMessage:\n${message}`
+    )}`;
+
+    window.location.href = mailtoUrl;
+    setFormSubmitted(true);
+  };
 
   return (
-    <section id="contact" className="footer-gradient pt-32 pb-24 px-6 mt-12 w-full">
-      <div className="max-w-5xl mx-auto">
-        <SectionHeading><span className="text-white">Get In Touch</span></SectionHeading>
+    <section id="contact" className="py-20 md:py-28">
+      <SectionHeading
+        eyebrow="Get In Touch"
+        description="Whether you have an opportunity, a project proposal, or want to discuss machine learning systems, my inbox is open."
+      >
+        Let&apos;s Connect &amp; Collaborate
+      </SectionHeading>
 
-        <div className="grid md:grid-cols-2 gap-12 mt-12">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-6">Let&apos;s connect</h3>
-            <p className="text-gray-300 mb-8 max-w-sm leading-relaxed">
-              I&apos;m currently open for new opportunities. If you have a question, feel free to reach out!
+      <div className="bg-slate-50/90 border border-slate-200 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xs">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          
+          {/* Left Column: Direct Contact Info with One-Click Copy */}
+          <div className="lg:col-span-5 space-y-6">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">
+                Contact Channels
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Click any direct channel to copy or open directly in your preferred app.
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              {/* Email Card with Copy Button */}
+              <div className="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-2xs hover:border-slate-300 transition-colors">
+                <div className="flex items-center gap-3 overflow-hidden">
+                  <div className="w-9 h-9 rounded-lg bg-sky-50 text-sky-700 border border-sky-100 flex items-center justify-center flex-shrink-0">
+                    <MailIcon size={18} />
+                  </div>
+                  <div className="truncate">
+                    <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                      Email Address
+                    </div>
+                    <a
+                      href={`mailto:${email}`}
+                      className="text-xs sm:text-sm font-semibold text-slate-800 hover:text-sky-600 truncate block"
+                    >
+                      {email}
+                    </a>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => handleCopy(email, "email")}
+                  className="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors flex items-center gap-1.5 flex-shrink-0"
+                  title="Copy email to clipboard"
+                >
+                  {copiedType === "email" ? (
+                    <>
+                      <CheckIcon size={13} className="text-emerald-600" />
+                      <span className="text-emerald-600">Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <CopyIcon size={13} />
+                      <span>Copy</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {/* Phone Card with Copy Button */}
+              <div className="bg-white border border-slate-200 rounded-xl p-4 flex items-center justify-between gap-3 shadow-2xs hover:border-slate-300 transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center flex-shrink-0">
+                    <PhoneIcon size={18} />
+                  </div>
+                  <div>
+                    <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                      Phone / WhatsApp
+                    </div>
+                    <a
+                      href={`tel:${phone.replace(/\s+/g, "")}`}
+                      className="text-xs sm:text-sm font-semibold text-slate-800 hover:text-emerald-600"
+                    >
+                      {phone}
+                    </a>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => handleCopy(phone, "phone")}
+                  className="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 transition-colors flex items-center gap-1.5 flex-shrink-0"
+                  title="Copy phone number to clipboard"
+                >
+                  {copiedType === "phone" ? (
+                    <>
+                      <CheckIcon size={13} className="text-emerald-600" />
+                      <span className="text-emerald-600">Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <CopyIcon size={13} />
+                      <span>Copy</span>
+                    </>
+                  )}
+                </button>
+              </div>
+
+              {/* Location Card */}
+              <div className="bg-white border border-slate-200 rounded-xl p-4 flex items-center gap-3 shadow-2xs">
+                <div className="w-9 h-9 rounded-lg bg-amber-50 text-amber-700 border border-amber-100 flex items-center justify-center flex-shrink-0">
+                  <MapPinIcon size={18} />
+                </div>
+                <div>
+                  <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+                    Location
+                  </div>
+                  <div className="text-xs sm:text-sm font-semibold text-slate-800">
+                    {location}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Profile Quick Links */}
+            <div className="pt-2 flex flex-wrap gap-2.5">
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 hover:text-sky-600 hover:border-sky-300 transition-colors shadow-2xs"
+              >
+                <LinkedinIcon size={15} />
+                <span>LinkedIn Profile</span>
+                <ExternalLinkIcon size={12} className="text-slate-400" />
+              </a>
+
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-white border border-slate-200 text-xs font-semibold text-slate-700 hover:text-slate-900 hover:border-slate-400 transition-colors shadow-2xs"
+              >
+                <GithubIcon size={15} />
+                <span>GitHub Profile</span>
+                <ExternalLinkIcon size={12} className="text-slate-400" />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column: Contact Message Form */}
+          <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xs">
+            <h3 className="text-lg font-bold text-slate-900 mb-1">
+              Send a Direct Message
+            </h3>
+            <p className="text-xs text-slate-500 mb-6">
+              Fill out the form below to immediately open your email client with your message pre-populated.
             </p>
 
-          <div className="space-y-4">
-            <div className="flex items-center gap-4 text-gray-300">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <a href={`mailto:${email}`} className="hover:text-blue-400 transition-colors">{email}</a>
-            </div>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    Your Name <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="e.g. Alex Sharma"
+                    className="w-full px-3.5 py-2 rounded-lg border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all bg-white"
+                  />
+                </div>
 
-            <div className="flex items-center gap-4 text-gray-300">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <div>
+                  <label htmlFor="email" className="block text-xs font-semibold text-slate-700 mb-1.5">
+                    Your Email <span className="text-rose-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="alex@company.com"
+                    className="w-full px-3.5 py-2 rounded-lg border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all bg-white"
+                  />
+                </div>
               </div>
-              <span>{phone}</span>
-            </div>
 
-            <div className="flex items-center gap-4 text-gray-300">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
+                <label htmlFor="message" className="block text-xs font-semibold text-slate-700 mb-1.5">
+                  Message <span className="text-rose-500">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  required
+                  placeholder="Tell me about your team, problem statement, or opportunity..."
+                  className="w-full px-3.5 py-2 rounded-lg border border-slate-200 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all bg-white resize-none"
+                ></textarea>
               </div>
-              <span>{location}</span>
-            </div>
 
-            <div className="flex items-center gap-4 text-gray-300">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </div>
-              <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">LinkedIn Profile ↗</a>
-            </div>
+              <div className="pt-2 flex items-center justify-between gap-4">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-lg bg-slate-900 text-white text-sm font-semibold hover:bg-sky-600 transition-colors shadow-xs"
+                >
+                  <MailIcon size={16} />
+                  <span>Send Message</span>
+                </button>
 
-            <div className="flex items-center gap-4 text-gray-300">
-              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                {formSubmitted && (
+                  <span className="text-xs font-semibold text-emerald-600 flex items-center gap-1">
+                    <CheckIcon size={14} />
+                    Email client opened!
+                  </span>
+                )}
               </div>
-              <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">GitHub Profile ↗</a>
-            </div>
+            </form>
           </div>
         </div>
-
-        <form className="space-y-4" onSubmit={(e) => {
-          e.preventDefault();
-          const formData = new FormData(e.currentTarget);
-          const senderName = formData.get('name');
-          const senderMessage = formData.get('message');
-          window.location.href = `mailto:${email}?subject=Portfolio Contact from ${senderName}&body=${encodeURIComponent(senderMessage as string)}`;
-        }}>
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              className="w-full px-4 py-2 border border-white/20 rounded-sm focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all placeholder-gray-500 text-white bg-white/5"
-              placeholder="Your Name"
-            />
-          </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full px-4 py-2 border border-white/20 rounded-sm focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all placeholder-gray-500 text-white bg-white/5"
-              placeholder="you@example.com"
-            />
-          </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              required
-              className="w-full px-4 py-2 border border-white/20 rounded-sm focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-all placeholder-gray-500 text-white bg-white/5 resize-none"
-              placeholder="Your message here..."
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full py-3 px-4 bg-transparent border-2 border-white text-white font-medium rounded-sm hover:bg-white hover:text-gray-900 transition-colors"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
       </div>
     </section>
   );

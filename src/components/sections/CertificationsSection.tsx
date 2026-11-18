@@ -1,56 +1,112 @@
 import { portfolioData } from "@/data/portfolio";
 import SectionHeading from "../SectionHeading";
+import { AwardIcon, TrophyIcon, ExternalLinkIcon } from "../Icons";
 
 export default function CertificationsSection() {
   const { certifications, achievements } = portfolioData;
 
   return (
-    <section id="achievements" className="py-24 bg-gray-50/50">
-      <SectionHeading>Learning & Achievements</SectionHeading>
+    <section id="credentials" className="py-20 md:py-28">
+      <SectionHeading
+        eyebrow="Verification & Recognition"
+        description="Verified industry credentials, competitive hackathon awards, and technical milestones."
+      >
+        Certifications &amp; Achievements
+      </SectionHeading>
 
-      <div className="grid md:grid-cols-2 gap-12 mt-12">
-        <div>
-          <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" className="text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 15l-2 5l9-5l-9-5l2 5z"></path><circle cx="12" cy="12" r="10"></circle></svg>
-            Certifications
-          </h3>
-          <ul className="space-y-6">
+      <div className="grid lg:grid-cols-12 gap-8 items-start">
+        {/* Left Column: Certifications */}
+        <div className="lg:col-span-6 space-y-4">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="p-1.5 rounded-md bg-sky-50 text-sky-700 border border-sky-100">
+              <AwardIcon size={18} />
+            </div>
+            <h3 className="text-lg font-bold text-slate-900">
+              Verified Certifications
+            </h3>
+          </div>
+
+          <div className="space-y-3">
             {certifications.map((cert, index) => (
-              <li key={index} className="flex gap-4 items-start">
-                <span className="w-2 h-2 rounded-full bg-blue-600 mt-2 flex-shrink-0"></span>
-                <span className="text-gray-800 leading-relaxed flex flex-col">
-                  <span className="font-medium text-gray-900">{cert.name}</span>
-                  <div className="flex items-center gap-3 mt-1">
-                    {cert.date && (
-                      <span className="text-xs font-semibold px-2 py-0.5 bg-gray-100 text-gray-600 rounded">
-                        {cert.date}
-                      </span>
-                    )}
-                    {cert.link && (
-                      <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs font-medium hover:underline flex items-center gap-1">
-                        View Certificate ↗
-                      </a>
-                    )}
+              <div
+                key={index}
+                className="bg-white border border-slate-200 rounded-xl p-4 sm:p-5 shadow-2xs hover:shadow-xs hover:border-slate-300 transition-all flex flex-col justify-between"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                      {cert.name}
+                    </h4>
+                    <p className="text-xs sm:text-sm font-medium text-slate-600 mt-0.5">
+                      {cert.issuer}
+                    </p>
                   </div>
-                </span>
-              </li>
+
+                  {cert.badge && (
+                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200 flex-shrink-0">
+                      {cert.badge}
+                    </span>
+                  )}
+                </div>
+
+                <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                  <span>{cert.date || "Completed"}</span>
+
+                  {cert.link && cert.link.trim() !== "" ? (
+                    <a
+                      href={cert.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-semibold text-sky-600 hover:text-sky-700 hover:underline"
+                    >
+                      <span>Verify Credential</span>
+                      <ExternalLinkIcon size={12} />
+                    </a>
+                  ) : (
+                    <span className="text-slate-400">Institutional Record</span>
+                  )}
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
-        <div>
-          <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" className="text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
-            Achievements & Activities
-          </h3>
-          <ul className="space-y-6">
+        {/* Right Column: Achievements & Awards */}
+        <div className="lg:col-span-6 space-y-4">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="p-1.5 rounded-md bg-amber-50 text-amber-700 border border-amber-100">
+              <TrophyIcon size={18} />
+            </div>
+            <h3 className="text-lg font-bold text-slate-900">
+              Honors &amp; Hackathon Awards
+            </h3>
+          </div>
+
+          <div className="space-y-3">
             {achievements.map((ach, index) => (
-              <li key={index} className="flex gap-4 items-start">
-                <span className="w-2 h-2 rounded-full bg-blue-600 mt-2 flex-shrink-0"></span>
-                <span className="text-gray-800 leading-relaxed">{ach}</span>
-              </li>
+              <div
+                key={index}
+                className="bg-white border border-slate-200 rounded-xl p-5 shadow-2xs hover:shadow-xs hover:border-slate-300 transition-all"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-amber-50 border border-amber-200/80 text-amber-700 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <TrophyIcon size={16} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                      {ach.title}
+                    </h4>
+                    <p className="text-xs font-semibold text-slate-500 mt-0.5 mb-2">
+                      {ach.organization}
+                    </p>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {ach.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </section>

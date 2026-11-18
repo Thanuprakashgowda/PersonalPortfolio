@@ -1,59 +1,90 @@
 import { portfolioData } from "@/data/portfolio";
 import SectionHeading from "../SectionHeading";
+import { GraduationCapIcon, AwardIcon } from "../Icons";
 
 export default function EducationSection() {
   const { education } = portfolioData;
 
   return (
-    <section id="education" className="py-24 bg-gray-50/50">
-      <SectionHeading>Education</SectionHeading>
-      
-      <div className="mt-12 space-y-8">
+    <section id="education" className="py-20 md:py-28">
+      <SectionHeading
+        eyebrow="Academic Background"
+        description="Formal computer science education, foundational engineering coursework, and scholastic milestones."
+      >
+        Education
+      </SectionHeading>
+
+      <div className="space-y-6 max-w-4xl">
         {education.map((edu, index) => (
-          <div 
-            key={index} 
-            className="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row md:items-start justify-between gap-6 hover:shadow-md transition-all duration-300"
+          <div
+            key={index}
+            className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-2xs hover:shadow-xs hover:border-slate-300 transition-all"
           >
-            <div className="flex-1">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">{edu.degree}</h3>
-              <p className="text-lg text-blue-600 font-medium mb-4">{edu.institution}</p>
-              
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-gray-800 text-sm">
-                <span className="flex items-center gap-1.5 font-medium px-3 py-1 bg-gray-100 rounded-full">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <div className="p-1.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-100">
+                    <GraduationCapIcon size={18} />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                    {edu.degree}
+                  </h3>
+                </div>
+
+                <p className="text-sm sm:text-base font-semibold text-slate-700 pl-8">
+                  {edu.institution}
+                </p>
+              </div>
+
+              {/* Graduation Period & Score */}
+              <div className="flex flex-wrap sm:flex-col items-start sm:items-end gap-2 text-xs">
+                <span className="px-3 py-1 bg-slate-100 text-slate-700 font-semibold rounded-md border border-slate-200">
                   {edu.graduation}
                 </span>
-                
+
                 {edu.score && (
-                  <span className="font-semibold text-gray-900">
-                    Score: <span className="text-blue-600">{edu.score}</span>
+                  <span className="px-2.5 py-0.5 bg-emerald-50 text-emerald-800 font-bold rounded-md border border-emerald-200">
+                    {edu.score}
                   </span>
                 )}
               </div>
-
-              {edu.coursework && edu.coursework.length > 0 && (
-                <div className="mt-4 pt-4 border-t border-gray-100">
-                  <p className="text-xs font-semibold text-gray-600 mb-2">Relevant Coursework:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {edu.coursework.map((course, i) => (
-                      <span key={i} className="text-xs font-medium px-2.5 py-1 bg-blue-50/80 text-blue-700 rounded-md border border-blue-100">
-                        {course}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
+
+            {/* Highlights (if any) */}
+            {edu.highlights && edu.highlights.length > 0 && (
+              <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-2">
+                {edu.highlights.map((h, hIdx) => (
+                  <span
+                    key={hIdx}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 bg-slate-50 px-2.5 py-1 rounded-md border border-slate-200/80"
+                  >
+                    <AwardIcon size={12} className="text-slate-400" />
+                    {h}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Relevant Coursework */}
+            {edu.coursework && edu.coursework.length > 0 && (
+              <div className="mt-4 pt-3 border-t border-slate-100">
+                <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                  Relevant Coursework
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {edu.coursework.map((course, cIdx) => (
+                    <span
+                      key={cIdx}
+                      className="text-xs font-medium px-2.5 py-0.5 bg-sky-50/80 text-sky-800 rounded-md border border-sky-100"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         ))}
-        
-        {/* Placeholder for future education listings */}
-        {/* <div className="border-2 border-dashed border-gray-200 rounded-2xl p-6 flex flex-col items-center justify-center text-gray-400 bg-gray-50/20">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-            </svg>
-            <span className="font-medium text-sm">Future Education Here</span>
-        </div> */}
       </div>
     </section>
   );

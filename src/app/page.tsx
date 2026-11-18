@@ -11,49 +11,35 @@ import ContactSection from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white text-slate-900">
       <Navbar />
       
+      {/* Hero Section */}
       <HeroSection />
       
-      <main className="flex-1 w-full max-w-5xl mx-auto px-6">
+      {/* Main Content Flow */}
+      <main className="flex-1 w-full max-w-6xl mx-auto px-6">
         <AboutSection />
-      </main>
-
-      <div className="w-full bg-gray-50/50 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <ExperienceSection />
-        </div>
-      </div>
-      
-      <div className="w-full border-t border-gray-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <EducationSection />
-        </div>
-      </div>
-      
-
-      
-      <div className="w-full border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <SkillsSection />
-        </div>
-      </div>
-      
-      <main className="flex-1 w-full max-w-5xl mx-auto px-6">
+        
+        <div className="w-full border-t border-slate-200/80" />
+        <ExperienceSection />
+        
+        <div className="w-full border-t border-slate-200/80" />
         <ProjectsSection />
+        
+        <div className="w-full border-t border-slate-200/80" />
+        <SkillsSection />
+        
+        <div className="w-full border-t border-slate-200/80" />
+        <EducationSection />
+        
+        <div className="w-full border-t border-slate-200/80" />
+        <CertificationsSection />
+        
+        <div className="w-full border-t border-slate-200/80" />
+        <ContactSection />
       </main>
 
-      <div className="w-full bg-gray-50/50 border-y border-gray-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <CertificationsSection />
-        </div>
-      </div>
-
-
-      
-      <ContactSection />
-      
       <Footer />
     </div>
   );

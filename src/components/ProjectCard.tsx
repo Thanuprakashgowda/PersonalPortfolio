@@ -1,62 +1,97 @@
-import React from 'react';
+import React from "react";
+import { ProjectItem } from "@/data/portfolio";
+import { GithubIcon, ExternalLinkIcon } from "./Icons";
 
 type ProjectCardProps = {
-  title: string;
-  technologies: string[];
-  description: string[];
-  githubLink?: string;
-  demoLink?: string;
+  project: ProjectItem;
 };
 
-export default function ProjectCard({
-  title,
-  technologies,
-  description,
-  githubLink,
-  demoLink,
-}: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
+  const { title, category, badge, technologies, description, highlights, githubLink, demoLink } = project;
+
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full hover:-translate-y-1">
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      
-      <div className="flex flex-wrap gap-2 mb-4">
-        {technologies.map((tech, index) => (
-          <span 
-            key={index}
-            className="px-2.5 py-1 bg-blue-50 text-blue-600 text-xs font-medium rounded-md"
+    <div className="group bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-2xs hover:shadow-md hover:border-slate-300 transition-all duration-200 flex flex-col h-full relative">
+      {/* Card Header: Category & Badge */}
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <span className="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 border border-slate-200">
+          {category}
+        </span>
+
+        {badge && (
+          <span className={`text-xs font-semibold px-2.5 py-1 rounded-md ${
+            badge.includes("Runner-Up") 
+              ? "bg-amber-50 text-amber-800 border border-amber-200" 
+              : "bg-sky-50 text-sky-700 border border-sky-100"
+          }`}>
+            {badge}
+          </span>
+        )}
+      </div>
+
+      {/* Project Title */}
+      <h3 className="text-xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors mb-3 leading-snug">
+        {title}
+      </h3>
+
+      {/* Highlights (if any) */}
+      {highlights && highlights.length > 0 && (
+        <div className="mb-4 space-y-1.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+          {highlights.map((hl, i) => (
+            <div key={i} className="flex items-center gap-2 text-xs font-medium text-slate-700">
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
+              <span>{hl}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Tech Tags */}
+      <div className="flex flex-wrap gap-1.5 mb-5">
+        {technologies.map((tech, i) => (
+          <span
+            key={i}
+            className="px-2 py-0.5 bg-slate-100 text-slate-700 text-xs font-medium rounded-md"
           >
             {tech}
           </span>
         ))}
       </div>
-      
-      <ul className="text-gray-800 text-sm space-y-2 mb-6 flex-grow list-disc list-outside ml-4">
-        {description.map((point, index) => (
-          <li key={index} className="leading-relaxed">{point}</li>
+
+      {/* Description bullets */}
+      <ul className="text-slate-600 text-sm space-y-2 mb-6 flex-grow">
+        {description.slice(0, 3).map((point, i) => (
+          <li key={i} className="flex items-start gap-2 leading-relaxed">
+            <span className="text-slate-400 mt-1 flex-shrink-0">•</span>
+            <span>{point}</span>
+          </li>
         ))}
       </ul>
-      
-      <div className="flex items-center gap-4 mt-auto pt-4 border-t border-gray-50">
-        {githubLink && (
+
+      {/* Footer Links */}
+      <div className="flex items-center gap-3 mt-auto pt-4 border-t border-slate-100">
+        {githubLink && githubLink.trim() !== "" ? (
           <a
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-1.5"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-900 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-            Code
+            <GithubIcon size={14} />
+            <span>Source Code</span>
           </a>
+        ) : (
+          <span className="text-xs text-slate-400 italic">Code upon request</span>
         )}
-        {demoLink && (
+
+        {demoLink && demoLink.trim() !== "" && (
           <a
             href={demoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1.5"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg text-sky-700 bg-sky-50 hover:bg-sky-100 border border-sky-200/80 transition-colors ml-auto"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            Live Demo
+            <span>Live Demo</span>
+            <ExternalLinkIcon size={12} />
           </a>
         )}
       </div>
